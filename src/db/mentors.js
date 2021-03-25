@@ -3,7 +3,10 @@
 const MentorsDB = [
     {
         name: 'Susan',
-        font: 'Arial',
+        style: {
+            fontFamily: 'Permenant Marker',
+            fontSize: 32,
+        },
         image: 'susan.jpg',
         keyWords: ['motherly', 'coddling', 'calm', 'guilt'],
         messages: [
@@ -16,7 +19,10 @@ const MentorsDB = [
     },
     {
         name: 'Dirk',
-        font: 'Arial',
+        style: {
+            fontFamily: "Rockwell",
+            fontSize: 32,
+        },
         image: 'dirk.jpg',
         keyWords: ['fatherly', 'distracted', 'glory-days', 'boostraps'],
         messages: [
@@ -29,7 +35,10 @@ const MentorsDB = [
     },
     {
         name: 'Spot',
-        font: 'Arial',
+        style: {
+            fontFamily: "Comic Sans MD",
+            fontSize: 32,
+        },
         image: 'spot.jpg',
         keyWords: ['dog'],
         messages: [
@@ -42,7 +51,10 @@ const MentorsDB = [
     },
     {
         name: 'Paul',
-        font: 'Arial',
+        style: {
+            fontFamily: "Didot",
+            fontSize: 32,
+        },
         image: 'paul.jpg',
         keyWords: ['unrelated', 'specific', 'analytical'],
         messages: [
@@ -55,20 +67,42 @@ const MentorsDB = [
     },
     {
         name: 'Cindy',
-        font: 'Arial',
+        style: {
+            fontFamily: "Tangerine",
+            fontSize: 34,
+        },
         image: 'cindy.jpg',
         keyWords: ['waitress', 'diner', 'hurried'],
         messages: [
             'Hon, I got pork chops and the rib eye on special; sorry, not sure if that answered your question about our specials.',
-            'Here is your water, by the way, I\'m taking a 15 minute break so Jose over there is going to take your food order.' ,
+            'Here is your water, sweetie. By the way, I\'m taking a 15 minute break so Jose over there is going to take your food order.' ,
             'Did you want a slice of pie? Just the check? Ok, great.',
             'I actually really like the liver and onions dinner, call me crazy, but it\'s really surprisingly good if you give it a chance.',
             'Is Diet Pepsi OK?',
         ]
     },
     {
+        name: 'Deego',
+        style: {
+            fontFamily: "Luminari",
+            fontSize: 34,
+        },
+        image: 'deego.jpg',
+        keyWords: ['waitress', 'diner', 'hurried'],
+        messages: [
+            'In the fourth age it was foretold such matters would arise. For it is now the age of problem and it is you who will conquer it.',
+            'When the Alanor blessed me with the gift of third-sight I was overcome with the goodness and the wretchedness of the Earth all at once. This I tell you in hopes you shall overcome this problem.' ,
+            'The most foulest of places, deep under the greatest of mountains, lie foes greater than your problem, I assure you.',
+            'A call to adventure? For this problem? This is no triffling matter, no story for the ages. Do not take such matters so lightly.',
+            'When the Earth came into being, in the age of the Gods, even the Alanor themselves knew not what they wrought.',
+        ]
+    },
+    {
         name: 'Plork',
-        font: 'Arial',
+        style: {
+            fontFamily: "Courier New",
+            fontSize: 28,
+        },
         image: 'plork.jpg',
         keyWords: ['alien', 'nervous', 'hurried'],
         messages: [

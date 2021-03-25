@@ -1,30 +1,28 @@
 import React from "react";
+import { Row } from 'react-bootstrap';
 
+// db array
 const MentorsDB = require("../db/mentors.js")
-
 
 const mentorsContent = MentorsDB.map((mentor) => {
         const imgSrc = '/images/' + mentor.image
         return (
-            <div> 
-                <img src={imgSrc} alt={mentor.name} />
+            <article className='mentorArticle'> 
+                <img src={imgSrc} alt={mentor.name} className='mentorImg' />
                 <h3>{mentor.name}</h3>
-                <p>{mentor.messages[0]}</p>
-            </div>
+                <p style={mentor.style}>{mentor.messages[1]}</p>
+            </article>
         )      
 })
-
-console.log(MentorsDB)
 
 class Mentors extends React.Component {
     render() {
         return (
-            <div>
+            <Row className='mentorContainer'>
                 {mentorsContent}
-            </div>
+            </Row>
         )
     }
 }
 
 export default Mentors;
-
