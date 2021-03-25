@@ -1,10 +1,10 @@
 // this is the pseudo-db as I do not know best practices for database connection to React yet!
 
-export const Mentors = [
+const MentorsDB = [
     {
         name: 'Susan',
         font: 'Arial',
-        image: 'susan.png',
+        image: 'susan.jpg',
         keyWords: ['motherly', 'coddling', 'calm', 'guilt'],
         messages: [
             'In my eyes you are perfect in every way. You make me so proud; you give my life so much purpose, thank you!',
@@ -17,7 +17,7 @@ export const Mentors = [
     {
         name: 'Dirk',
         font: 'Arial',
-        image: 'dirk.png',
+        image: 'dirk.jpg',
         keyWords: ['fatherly', 'distracted', 'glory-days', 'boostraps'],
         messages: [
             'You know what I think, Sport? I think you need to toughen up a bit. Get some grit, and tackle this problem head on!',
@@ -30,7 +30,7 @@ export const Mentors = [
     {
         name: 'Spot',
         font: 'Arial',
-        image: 'spot.png',
+        image: 'spot.jpg',
         keyWords: ['dog'],
         messages: [
             'Bark! Bark bark bark!',
@@ -43,7 +43,7 @@ export const Mentors = [
     {
         name: 'Paul',
         font: 'Arial',
-        image: 'paul.png',
+        image: 'paul.jpg',
         keyWords: ['unrelated', 'specific', 'analytical'],
         messages: [
             'In my estimation your problem is as follows: you haven\'t started saving for retirement yet. Though it\'s never too late, at this point in the game there aren\'t a lot of minutes left in the quarter, so to speak.',
@@ -56,7 +56,7 @@ export const Mentors = [
     {
         name: 'Cindy',
         font: 'Arial',
-        image: 'cindy.png',
+        image: 'cindy.jpg',
         keyWords: ['waitress', 'diner', 'hurried'],
         messages: [
             'Hon, I got pork chops and the rib eye on special; sorry, not sure if that answered your question about our specials.',
@@ -69,7 +69,7 @@ export const Mentors = [
     {
         name: 'Plork',
         font: 'Arial',
-        image: 'plork.png',
+        image: 'plork.jpg',
         keyWords: ['alien', 'nervous', 'hurried'],
         messages: [
             'Haha, yes, I can relate completely to your problem! I have also experienced that problem many times. Thank you!',
@@ -80,3 +80,5 @@ export const Mentors = [
         ]
     },
 ]
+
+module.exports = MentorsDB;

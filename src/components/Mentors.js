@@ -1,28 +1,30 @@
 import React from "react";
 
-const mentorDB = require("../db/mentors.js")
+const MentorsDB = require("../db/mentors.js")
 
+
+const mentorsContent = MentorsDB.map((mentor) => {
+        const imgSrc = '/images/' + mentor.image
+        return (
+            <div> 
+                <img src={imgSrc} alt={mentor.name} />
+                <h3>{mentor.name}</h3>
+                <p>{mentor.messages[0]}</p>
+            </div>
+        )      
+})
+
+console.log(MentorsDB)
 
 class Mentors extends React.Component {
     render() {
         return (
-            <Mentor img='test.png' name='test' message='Hello'></Mentor>
+            <div>
+                {mentorsContent}
+            </div>
         )
     }
 }
 
 export default Mentors;
 
-
-
-function Mentor(props) {
-    const imgURL = '../../public/images/' + props.img;
-
-    return (
-        <div>
-            <img src={imgURL} alt={props.name}/>
-            <h3>{props.name}</h3>
-            <p>{props.message}</p>
-        </div>
-    );
-}
