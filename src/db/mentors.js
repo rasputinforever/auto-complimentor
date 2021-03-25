@@ -1,6 +1,6 @@
 // this is the pseudo-db as I do not know best practices for database connection to React yet!
 
-const Mentors = [
+export const Mentors = [
     {
         name: 'Susan',
         font: 'Arial',
