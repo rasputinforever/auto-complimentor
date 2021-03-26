@@ -26,9 +26,7 @@ class UserInput extends React.Component {
       event.preventDefault();
 
       // render the Mentors using state info from here!
-      this.setState({
-        response: true
-      });
+      this.state.response = true;
       
       // sends to parent
       this.props.onUpdate(this.state)
