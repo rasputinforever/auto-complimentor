@@ -6,7 +6,6 @@ const MentorsDB = require("../db/mentors.js")
 
 class Mentors extends React.Component {
     constructor(props) {
-        console.log(props)
         super(props);
 
         this.state = {
@@ -14,11 +13,11 @@ class Mentors extends React.Component {
             problem: props.problem,
             response: true
             }
-        console.log(this.state)
       }
 
       handleSubmitBtn = event => {
         event.preventDefault();
+        console.log(this.state)
   
         // render the Mentors using state info from here!
         this.setState({
@@ -28,7 +27,6 @@ class Mentors extends React.Component {
         });
         
         // sends to parent
-        console.log(this.state)
         this.props.onUpdate(this.state)
   
       };

@@ -20,6 +20,7 @@ class Body extends React.Component {
       response: true
      });
 
+     console.log(this.state)
     
   };
 
@@ -27,8 +28,9 @@ class Body extends React.Component {
       return (
         <Container>
           
-          {this.state.response === false ? <UserInput onUpdate={this.handleInputChange}/> : <></>}
+          {this.state.response === false ? <UserInput username={this.state.username} problem={this.state.problem} onUpdate={this.handleInputChange}/> : <></>}
           {this.state.response === true ? <Mentors username={this.state.username} problem={this.state.problem} onUpdate={this.handleInputChange}/> : <></>}
+
         </Container>
       );
     }

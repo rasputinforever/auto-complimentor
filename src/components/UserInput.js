@@ -2,11 +2,15 @@ import React from "react";
 import { Row, InputGroup, FormControl } from 'react-bootstrap';
 
 class UserInput extends React.Component {
-    state = {
-        username: '',
-        problem: '',
+  constructor(props) {
+    super(props);
+
+    this.state = {
+        username: props.username,
+        problem: props.problem,
         response: false
-      };
+        }
+  }
     
     handleInputChange = event => {
       const value = event.target.value;
