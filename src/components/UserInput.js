@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, InputGroup, FormControl } from 'react-bootstrap';
+import API from "../utils/API";
 
 class UserInput extends React.Component {
   constructor(props) {
@@ -11,7 +12,9 @@ class UserInput extends React.Component {
         response: false
         }
   }
-    
+
+
+
     handleInputChange = event => {
       const value = event.target.value;
       const name = event.target.name;
@@ -20,11 +23,19 @@ class UserInput extends React.Component {
       this.setState({
         [name]: value
       });
+
+    };
+
+    searchDictionary = query => {
+      API.search(query)
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
     };
 
     handleFormSubmit = event => {
       event.preventDefault();
 
+      this.searchDictionary(this.state.problem);
       // render the Mentors using state info from here!
       this.state.response = true;
       

@@ -143,7 +143,7 @@ const MentorsDB = [
             `userProblem? Of course I've heard of userProblem, I'm not an idiot. My brother, who actually is in college, told me userProblem is all over the place over there. He knows all about stuff like that.`,
             `Hey, userName, what's up? userProblem? Oh, yeah, I know about userProblem. My friend from middle school used to talk about that all the time. He was a pretty big nerd, but he was actually really cool.`,
             `Oh, userName, you want to come over tonight and play userProblem? I never heard of that game but I do have an XBOX and Playstation so I think we can get it going.`,
-            `My sister is always going on about userName. She is so annoying. I can't believe I used to be a 6th grader. I wasn never that lame, though, know what I mean userName?`,
+            `My sister is always going on about userProblem. She is so annoying. I can't believe I used to be a 6th grader. I was never that lame, though, know what I mean userName?`,
             `Hey, I'll catch up with you at Math, userName, the bell just rang! Ask me about userProblem after school!`
         ]
     },
