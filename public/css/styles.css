@@ -1,20 +1,22 @@
 .mentorImg {
-    width: 100px;
+    width: 150px;
+    margin-top: 5px;
 }
 
 .mentorArticle {
     width: 100%;
-    margin-bottom: 40px;
-    padding: 15px;
-    height: 250px;
+    margin-bottom: 20px;
+    border: 5px solid blue;
+    padding: 5px;
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mentorCard {
+    color: grey;
+    background-color: lightgoldenrodyellow;
 }
 
 .mentorTextBox {
 
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-image: url('../images/talkBox.jpg');
-    padding-left: 80px;
-    padding-top: 15px;
+
 }

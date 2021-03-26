@@ -39,11 +39,13 @@ class Mentors extends React.Component {
                         const newMessage = transformMessage(mentorMessage, this.state.username, this.state.problem)
                         return (
                             <Row className='mentorArticle' key={mentor.name}> 
-                                    <Col>
+                                    <Col sm={3} className='mentorCard'>
                                         <img src={imgSrc} alt={mentor.name} className='mentorImg' />
                                         <h3>{mentor.name}</h3>
+                                        <p>Age: {mentor.age}</p>
+                                        <p>Location: {mentor.location}</p>
                                     </Col>
-                                    <Col xs={10} className='mentorTextBox'>
+                                    <Col sm={8} className='mentorTextBox'>
                                         <p className='mentorText' style={mentor.style}>{newMessage}</p>
                                     </Col>
                             </Row>

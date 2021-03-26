@@ -3,6 +3,8 @@
 const MentorsDB = [
     {
         name: 'Susan',
+        age: '58',
+        location: 'Phoenix, Arizona',
         style: {
             fontFamily: 'Permenant Marker',
             fontSize: 28,
@@ -20,6 +22,8 @@ const MentorsDB = [
     },
     {
         name: 'Dirk',
+        age: '62',
+        location: 'Dayton, Ohio',
         style: {
             fontFamily: "Rockwell",
             fontSize: 32,
@@ -36,6 +40,8 @@ const MentorsDB = [
     },
     {
         name: 'Spot',
+        age: '1',
+        location: 'Portland, Oregon',
         style: {
             fontFamily: "Comic Sans MD",
             fontSize: 32,
@@ -52,6 +58,8 @@ const MentorsDB = [
     },
     {
         name: 'Paul',
+        age: '32',
+        location: 'Los Angeles, California',
         style: {
             fontFamily: "Didot",
             fontSize: 32,
@@ -69,6 +77,8 @@ const MentorsDB = [
     },
     {
         name: 'Cindy',
+        age: '42',
+        location: 'Tulsa, Oklahoma',
         style: {
             fontFamily: "Tangerine",
             fontSize: 34,
@@ -85,6 +95,8 @@ const MentorsDB = [
     },
     {
         name: 'Deego',
+        age: '1087',
+        location: ' Montpelier, Vermont',
         style: {
             fontFamily: "Luminari",
             fontSize: 34,
@@ -101,6 +113,8 @@ const MentorsDB = [
     },
     {
         name: 'Plork',
+        age: '?',
+        location: 'Roswell, New Mexico',
         style: {
             fontFamily: "Courier New",
             fontSize: 28,
