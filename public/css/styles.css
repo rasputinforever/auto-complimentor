@@ -1,3 +1,20 @@
 .mentorImg {
     width: 100px;
 }
+
+.mentorArticle {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 15px;
+    height: 250px;
+}
+
+.mentorTextBox {
+
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-image: url('../images/talkBox.jpg');
+    padding-left: 80px;
+    padding-top: 15px;
+}

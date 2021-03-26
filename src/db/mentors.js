@@ -5,16 +5,17 @@ const MentorsDB = [
         name: 'Susan',
         style: {
             fontFamily: 'Permenant Marker',
-            fontSize: 32,
+            fontSize: 28,
+            padding: '10px',
         },
         image: 'susan.jpg',
         keyWords: ['motherly', 'coddling', 'calm', 'guilt'],
         messages: [
-            'In my eyes you are perfect in every way. You make me so proud; you give my life so much purpose, thank you!',
-            'I could never imagine something like this for you, you have always been the light of my life.' ,
-            'You? A problem? All this time you have always risen up to your challenges in your own special way.',
-            'Call it what you will but I think this problem of yours is actually a blessing in disguise, just as you are a blessing to me.',
-            'I can\'t bear to see you troubled, it makes me so proud to be part of your life when you rise to these challenges.',
+            `In my eyes, userName, you are perfect in every way. You make me so proud; you give my life so much purpose, thank you! I would never think userProblem could get in the way of any of that.`,
+            `I could never imagine something like this for you, userName. You have always been the light of my life, and the strongest of all of us. Thank you for making me so proud.` ,
+            `userName? userProblem? It's incredible that you have come so far in your life that you would encounter such challenges. I trust your decision on this and I know you'll make me proud.`,
+            `Call it what you will but I think this problem of yours is actually a blessing in disguise, just as you are a blessing to me.`,
+            `I can't bear to see you troubled, it makes me so proud to be part of your life when you rise to these challenges.`,
         ]
     },
     {
