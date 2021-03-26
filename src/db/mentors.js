@@ -30,7 +30,7 @@ const MentorsDB = [
             'You know what I think, Sport? Sorry, sorry: userName. Anyway, I think you need to toughen up a bit. Get some grit, and tackle userProblem head on!',
             'Back in my day we didn\'t have userProblem. We faced every challenge with gusto. Like the time me and the boys won the regionals. Those were the days...' ,
             'Sport, er, userName: I just don\'t see what the problem is. If it were me in your shoes the first thing I\'d do is pull up those bootstraps, grin, and attack userProblem with my own determination!',
-            'Why is your generation so concerned with userProblem? I don\'t know if I\'ll ever understand your generation, userName. Life isn\'t so complicated if you toughen up!',
+            'Why is your generation so concerned with userProblem? I don\'t know if I\'ll ever understand you kids, userName. Life isn\'t so complicated if you toughen up!',
             'Back in my day, Sport, we just called a userProblem a userProblem and that was that.',
         ]
     },
@@ -96,8 +96,7 @@ const MentorsDB = [
             `When the Alanor blessed me with the gift of third-sight I saw all the goodness of earth consumed by the wretchedness of userProblem. In an instant I came to from my premonition and since then I knew it was you, userName, who would return Terra to a new era of peace.`,
             `In the deepest reaches of Terra, below the Cloudy Crest, lies a place most foul where userProblem dwells. userName! You will conquer this place and liberate the underground orc city of Doria!`,
             `Adventure? In matters concerning userProblem, there is no so-called 'adventure', my dear userName. No, this is a grave matter indeed and one we which must seek council for.`,
-            `In the First Age of Terra`,
-            'When the Earth came into being, in the age of the Gods, even the Alanor themselves knew not what they wrought.',
+            `In the First Age of Terra, on the day the Alanor cried out and existence began, even Mother Aärde did not forsee the wickedness of userProblem. In truth, to them, all of Terra was pure and good.`,
         ]
     },
     {
@@ -109,11 +108,11 @@ const MentorsDB = [
         image: 'plork.jpg',
         keyWords: ['alien', 'nervous', 'hurried'],
         messages: [
-            'Haha, yes, I can relate completely to your problem! I have also experienced that problem many times. Thank you!',
-            'When I was a human child I had this problem occur to me many times and on each time it occured to me I also had trouble with that problem!',
-            'It would seem for us, normal human people, that we are often challenged by problems such as this one.',
-            'When I arrived to this land mass and began interacting with its inhabitants I was struck by both how sentient the beings here are as well as how troubled they appear to be.',
-            'This reminds me of a funny annecdote that happened to me; I was imbibing on the typical meal of this region that we all enjoy and noticed a small creature running about on the ground of that establishment. I was not too sure if it was also a sentient create, such as ourselves, but I was too nervous to ask it.',
+            `Ha. Ha. Yes. I fully relate to your userProblem! I have also expereinced userProblem many times in my dozens of rotations! Ha. Ha.`,
+            `This particular userProblem has initiated a recall into my own past. An anecdote, of course! I have many anecdotes to share with you, fellow userName.`,
+            `Ah, yes. Normal humans like us often concern ourselves with userProblem. It is a natural form of expression for userName, is it not?`,
+            `Like yourself, I too am a life-form concerned with userProblem. Every regular interval I am also asking others for their wisdom on that matter. I am just like you, userName.`,
+            `A 'funny' anecode, you say? Yes, there was a time when I was not sure which creatures were sentient and which were not in this region and on one occasion I asked one of the smaller mamallians for their thoughts on userProblem and they simply replied with a sound like this: 'bork! bork!'`,
         ]
     },
 ]
