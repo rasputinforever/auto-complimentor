@@ -17,7 +17,6 @@ class Mentors extends React.Component {
 
       handleSubmitBtn = event => {
         event.preventDefault();
-        console.log(this.state)
   
         // render the Mentors using state info from here!
         this.setState({
