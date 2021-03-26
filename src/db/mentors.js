@@ -106,7 +106,7 @@ const MentorsDB = [
         messages: [
             `In the fourth Age of Terra it was foretold by the Alanor that userProblem would rise again. After a millenium of peace a new era begins: the Age of userProblem.`,
             `When the Alanor blessed me with the gift of third-sight I saw all the goodness of earth consumed by the wretchedness of userProblem. In an instant I came to from my premonition and since then I knew it was you, userName, who would return Terra to a new era of peace.`,
-            `In the deepest reaches of Terra, below the Cloudy Crest, lies a place most foul where userProblem dwells. userName! You will conquer this place and liberate the underground orc city of Doria!`,
+            `In the deepest reaches of Terra, below the Cloudy Crest, lies a place most foul where userProblem dwells. userName! You will conquer this place and liberate the underground orc city of Doria from userProblem!`,
             `Adventure? In matters concerning userProblem, there is no so-called 'adventure', my dear userName. No, this is a grave matter indeed and one we which must seek council for.`,
             `In the First Age of Terra, on the day the Alanor cried out and existence began, even Mother Aärde did not forsee the wickedness of userProblem. In truth, to them, all of Terra was pure and good.`,
         ]
@@ -129,6 +129,27 @@ const MentorsDB = [
             `A 'funny' anecode, you say? Yes, there was a time when I was not sure which creatures were sentient and which were not in this region and on one occasion I asked one of the smaller mamallians for their thoughts on userProblem and they simply replied with a sound like this: 'bork! bork!'`,
         ]
     },
+    {
+        name: 'Phillip',
+        age: '14',
+        location: 'Austin, Texas',
+        style: {
+            fontFamily: "",
+            fontSize: 28,
+        },
+        image: 'phillip.jpg',
+        keyWords: ['young', 'games', 'immature'],
+        messages: [
+            `userProblem? Of course I've heard of userProblem, I'm not an idiot. My brother, who actually is in college, told me userProblem is all over the place over there. He knows all about stuff like that.`,
+            `Hey, userName, what's up? userProblem? Oh, yeah, I know about userProblem. My friend from middle school used to talk about that all the time. He was a pretty big nerd, but he was actually really cool.`,
+            `Oh, userName, you want to come over tonight and play userProblem? I never heard of that game but I do have an XBOX and Playstation so I think we can get it going.`,
+            `My sister is always going on about userName. She is so annoying. I can't believe I used to be a 6th grader. I wasn never that lame, though, know what I mean userName?`,
+            `Hey, I'll catch up with you at Math, userName, the bell just rang! Ask me about userProblem after school!`
+        ]
+    },
 ]
+
+
+
 
 module.exports = MentorsDB;
