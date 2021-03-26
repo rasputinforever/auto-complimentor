@@ -1,8 +1,6 @@
 import React from "react";
 import { Row, InputGroup, FormControl } from 'react-bootstrap';
 
-import Mentors from "./Mentors";
-
 class UserInput extends React.Component {
     state = {
         username: '',
@@ -22,10 +20,15 @@ class UserInput extends React.Component {
 
     handleFormSubmit = event => {
       event.preventDefault();
+
       // render the Mentors using state info from here!
       this.setState({
         response: true
       });
+      
+      // sends to parent
+      this.props.onUpdate(this.state)
+
     };
     
     render() {
@@ -52,8 +55,6 @@ class UserInput extends React.Component {
             </InputGroup>
 
             <button onClick={this.handleFormSubmit}>Submit</button>
-
-            {this.state.response === true ? <Mentors name={this.state.username} problem={this.state.problem}/> : <></>}
 
           </Row>
       );

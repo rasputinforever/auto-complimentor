@@ -4,33 +4,41 @@ import { Row, Col } from 'react-bootstrap';
 // db array
 const MentorsDB = require("../db/mentors.js")
 
+class Mentors extends React.Component {
+    constructor(props) {
+        super(props);
 
+        this.state = {
+            username: props.username,
+            problem: props.response,
+            }
+      }
 
-function Mentors(props) {   
-
-    const mentorsContent = MentorsDB.map((mentor) => {
-        const imgSrc = '/images/' + mentor.image
-        const mentorMessage = messageRandomizer(mentor.messages)
-        const newMessage = transformMessage(mentorMessage, props.name, props.problem)
-        return (
-            <Row className='mentorArticle' key={mentor.name}> 
-                    <Col>
-                        <img src={imgSrc} alt={mentor.name} className='mentorImg' />
-                        <h3>{mentor.name}</h3>
-                    </Col>
-                    <Col xs={10} className='mentorTextBox'>
-                        <p className='mentorText' style={mentor.style}>{newMessage}</p>
-                    </Col>
+      render() {
+          return (
+            <Row className='mentorContainer'>
+                {
+                    MentorsDB.map((mentor) => {
+                        const imgSrc = '/images/' + mentor.image
+                        const mentorMessage = messageRandomizer(mentor.messages)
+                        const newMessage = transformMessage(mentorMessage, this.state.name, this.state.problem)
+                        return (
+                            <Row className='mentorArticle' key={mentor.name}> 
+                                    <Col>
+                                        <img src={imgSrc} alt={mentor.name} className='mentorImg' />
+                                        <h3>{mentor.name}</h3>
+                                    </Col>
+                                    <Col xs={10} className='mentorTextBox'>
+                                        <p className='mentorText' style={mentor.style}>{newMessage}</p>
+                                    </Col>
+                            </Row>
+                        )      
+                    })
+                }
+                <button>New Advice...</button>
             </Row>
-        )      
-    })
-
-    return (
-        <Row className='mentorContainer'>
-            {mentorsContent}
-        </Row>
-    )
-    
+        )
+      }
 }
 
 export default Mentors;
@@ -38,7 +46,6 @@ export default Mentors;
 function messageRandomizer(msgArr) {
 
     const msg = msgArr[Math.floor(Math.random() * msgArr.length)]
-    
 
     return msg
 
@@ -46,23 +53,23 @@ function messageRandomizer(msgArr) {
 
 function transformMessage(msg, name, prob) {
     
- let msgArr = msg.split(" ")
+    let msgArr = msg.split(" ")
 
- msgArr.forEach(word => {
-     if (word.indexOf('userName') > -1) {
+    msgArr.forEach(word => {
+        if (word.indexOf('userName') > -1) {
 
-        const newName = name + word.slice("userName".length)
+            const newName = name + word.slice("userName".length)
 
-        msgArr[msgArr.indexOf(word)] = newName
-     } else if (word.indexOf('userProblem') > -1) {
+            msgArr[msgArr.indexOf(word)] = newName
+        } else if (word.indexOf('userProblem') > -1) {
 
-        const newProb = prob + word.slice("userProblem".length)
+            const newProb = prob + word.slice("userProblem".length)
 
-        msgArr[msgArr.indexOf(word)] = newProb
+            msgArr[msgArr.indexOf(word)] = newProb
 
-     }
- })
+        }
+    })
 
- return msgArr.join(" ")
+    return msgArr.join(" ")
     
 }
