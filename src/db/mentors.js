@@ -14,8 +14,8 @@ const MentorsDB = [
             `In my eyes, userName, you are perfect in every way. You make me so proud; you give my life so much purpose, thank you! I would never think userProblem could get in the way of any of that.`,
             `I could never imagine something like this for you, userName. You have always been the light of my life, and the strongest of all of us. Thank you for making me so proud.` ,
             `userName? userProblem? It's incredible that you have come so far in your life that you would encounter such challenges. I trust your decision on this and I know you'll make me proud.`,
-            `Call it what you will but I think this problem of yours is actually a blessing in disguise, just as you are a blessing to me.`,
-            `I can't bear to see you troubled, it makes me so proud to be part of your life when you rise to these challenges.`,
+            `Call it what you will but I think this problem of yours, what is it called, userProblem? It is actually a blessing in disguise, just as you are a blessing to me, userName.`,
+            `It hurts me deep down to know that userProblem could be causing you, my dearest userName, so much grief. You are strong, you will get through this. I have faith in you!`,
         ]
     },
     {
@@ -27,11 +27,11 @@ const MentorsDB = [
         image: 'dirk.jpg',
         keyWords: ['fatherly', 'distracted', 'glory-days', 'boostraps'],
         messages: [
-            'You know what I think, Sport? I think you need to toughen up a bit. Get some grit, and tackle this problem head on!',
-            'Back in my day we did\'t have problems. We faced every challenge with gusto. Like the time me and the boys won the regionals. Those were the days...' ,
-            'Sport, I just don\'t see what the problem is. If it were me in your shoes the first thing I\'d do is pull up those bootstraps, grin, and bare it!',
-            'Why is your generation so concerned with these problems? I don\'t know if I\'ll ever understand, life isn\'t so complicated if you toughen up!',
-            'Back in my day, Sport, we just called a spade a spade and that was that.',
+            'You know what I think, Sport? Sorry, sorry: userName. Anyway, I think you need to toughen up a bit. Get some grit, and tackle userProblem head on!',
+            'Back in my day we didn\'t have userProblem. We faced every challenge with gusto. Like the time me and the boys won the regionals. Those were the days...' ,
+            'Sport, er, userName: I just don\'t see what the problem is. If it were me in your shoes the first thing I\'d do is pull up those bootstraps, grin, and attack userProblem with my own determination!',
+            'Why is your generation so concerned with userProblem? I don\'t know if I\'ll ever understand your generation, userName. Life isn\'t so complicated if you toughen up!',
+            'Back in my day, Sport, we just called a userProblem a userProblem and that was that.',
         ]
     },
     {
@@ -43,10 +43,10 @@ const MentorsDB = [
         image: 'spot.jpg',
         keyWords: ['dog'],
         messages: [
-            'Bark! Bark bark bark!',
-            'Bark! ... Bark! ... Bark bark!!' ,
+            'Bark! Bark bark bark! (Spot is amused by userProblem)',
+            'Bark! ... Bark! ... Bark bark!! (Spot is visibly upset by userProblem)' ,
             '... (Spot is sleeping)',
-            'Grrr... Bark!',
+            'Grrr... Bark! (Spot is intimidated by userProblem)',
             '... Woof.',
         ]
     },
