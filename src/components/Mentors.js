@@ -6,13 +6,32 @@ const MentorsDB = require("../db/mentors.js")
 
 class Mentors extends React.Component {
     constructor(props) {
+        console.log(props)
         super(props);
 
         this.state = {
             username: props.username,
-            problem: props.response,
+            problem: props.problem,
+            response: true
             }
+        console.log(this.state)
       }
+
+      handleSubmitBtn = event => {
+        event.preventDefault();
+  
+        // render the Mentors using state info from here!
+        this.setState({
+            username: '',
+            problem: '',
+            response: false
+        });
+        
+        // sends to parent
+        console.log(this.state)
+        this.props.onUpdate(this.state)
+  
+      };
 
       render() {
           return (
@@ -21,7 +40,7 @@ class Mentors extends React.Component {
                     MentorsDB.map((mentor) => {
                         const imgSrc = '/images/' + mentor.image
                         const mentorMessage = messageRandomizer(mentor.messages)
-                        const newMessage = transformMessage(mentorMessage, this.state.name, this.state.problem)
+                        const newMessage = transformMessage(mentorMessage, this.state.username, this.state.problem)
                         return (
                             <Row className='mentorArticle' key={mentor.name}> 
                                     <Col>
@@ -35,7 +54,9 @@ class Mentors extends React.Component {
                         )      
                     })
                 }
-                <button>New Advice...</button>
+
+                <button onClick={this.handleSubmitBtn}>New Advice...</button>
+
             </Row>
         )
       }
