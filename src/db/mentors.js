@@ -59,11 +59,12 @@ const MentorsDB = [
         image: 'paul.jpg',
         keyWords: ['unrelated', 'specific', 'analytical'],
         messages: [
-            'In my estimation your problem is as follows: you haven\'t started saving for retirement yet. Though it\'s never too late, at this point in the game there aren\'t a lot of minutes left in the quarter, so to speak.',
-            'What I\'m seeing here is basic statistics. You\'re the outlier here and the standard deviation is narrow enough that by your point of view you\'re basically in outer space!' ,
-            'This really reminds me of the American War of 1812. Oft forgotten, but really wild when you think about how it was basically an epilogue to the American Revolution and that we got our Anthem at that time.',
-            'Your problem is like the Quadratic Equation. It seems intimidating, especially when you\'re in high school, but it\'s actually quite beautiful when you revisit it as an older, wiser version of yourself.',
-            'My analytical self says that your problem is actually not a problem at all. Just think about it like that and you\'ll be good to go!',
+            `My dude: you can't let userProblem get in the way of saving for your future. Look at me, when I was 19 I started my own business and I retired by 30. userProblem or no userProblem, you gotta look out for number one!`,
+            `userName, let me hook you up with a buddy of mine who's big into stocks. He actually got into Bitcoin recently too; definitely a real genius type. Spend an afternoon at his apartment and userProblem won't even register anymore.`,
+            `This is a basic statistics problem. userProblem is an outlier in an otherwise normal situation you're living. You're fixated on userProblem, you in fact think you're userProblem, but you're not userProblem: you are userName.`,
+            `Dude, I was watching History Channel last night and they were talking about userProblem in Nazi Germany. You wouldn't believe the kind of stuff going on there, it's amazing how people forget about the past.`,
+            `userProblem is a lot like the Quadratic Equation, userName. It may seem really obtuse, large, overwhelming, but when you really get into it you realize it has it's own kind of beauty, know what I mean?`,
+            `userName, my analytical mind tells me that your problem is that you think userProblem is a problem. If you just realize userProblem isn't a problem you'll be all set!`,
         ]
     },
     {
@@ -75,11 +76,11 @@ const MentorsDB = [
         image: 'cindy.jpg',
         keyWords: ['waitress', 'diner', 'hurried'],
         messages: [
-            'Hon, I got pork chops and the rib eye on special; sorry, not sure if that answered your question about our specials.',
-            'Here is your water, sweetie. By the way, I\'m taking a 15 minute break so Jose over there is going to take your food order.' ,
-            'Did you want a slice of pie? Just the check? Ok, great.',
-            'I actually really like the liver and onions dinner, call me crazy, but it\'s really surprisingly good if you give it a chance.',
-            'Is Diet Pepsi OK?',
+            `Hon, I got pork chops and the rib eye on special; sorry, not sure if that answered your question about userProblem.`,
+            `Here is your userProblem, sweetie. By the way, I'm taking a 15 minute break so Jose over there is going to take your food order.` ,
+            `Did you want a slice of pie? Just the check? Ok, great.`,
+            `I actually really like the userProblem and onions dinner, call me crazy, but it's really surprisingly good if you give it a chance.`,
+            `Is Diet userProblem OK?`,
         ]
     },
     {
@@ -91,10 +92,11 @@ const MentorsDB = [
         image: 'deego.jpg',
         keyWords: ['waitress', 'diner', 'hurried'],
         messages: [
-            'In the fourth age it was foretold such matters would arise. For it is now the age of problem and it is you who will conquer it.',
-            'When the Alanor blessed me with the gift of third-sight I was overcome with the goodness and the wretchedness of the Earth all at once. This I tell you in hopes you shall overcome this problem.' ,
-            'The most foulest of places, deep under the greatest of mountains, lie foes greater than your problem, I assure you.',
-            'A call to adventure? For this problem? This is no triffling matter, no story for the ages. Do not take such matters so lightly.',
+            `In the fourth Age of Terra it was foretold by the Alanor that userProblem would rise again. After a millenium of peace a new era begins: the Age of userProblem.`,
+            `When the Alanor blessed me with the gift of third-sight I saw all the goodness of earth consumed by the wretchedness of userProblem. In an instant I came to from my premonition and since then I knew it was you, userName, who would return Terra to a new era of peace.`,
+            `In the deepest reaches of Terra, below the Cloudy Crest, lies a place most foul where userProblem dwells. userName! You will conquer this place and liberate the underground orc city of Doria!`,
+            `Adventure? In matters concerning userProblem, there is no so-called 'adventure', my dear userName. No, this is a grave matter indeed and one we which must seek council for.`,
+            `In the First Age of Terra`,
             'When the Earth came into being, in the age of the Gods, even the Alanor themselves knew not what they wrought.',
         ]
     },

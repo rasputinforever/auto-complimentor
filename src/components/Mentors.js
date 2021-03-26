@@ -7,14 +7,13 @@ const MentorsDB = require("../db/mentors.js")
 
 
 function Mentors(props) {   
-    console.log(props.problem)
 
     const mentorsContent = MentorsDB.map((mentor) => {
         const imgSrc = '/images/' + mentor.image
         const mentorMessage = messageRandomizer(mentor.messages)
         const newMessage = transformMessage(mentorMessage, props.name, props.problem)
         return (
-            <Row className='mentorArticle'> 
+            <Row className='mentorArticle' key={mentor.name}> 
                     <Col>
                         <img src={imgSrc} alt={mentor.name} className='mentorImg' />
                         <h3>{mentor.name}</h3>
@@ -39,15 +38,31 @@ export default Mentors;
 function messageRandomizer(msgArr) {
 
     const msg = msgArr[Math.floor(Math.random() * msgArr.length)]
+    
 
     return msg
 
 }
 
 function transformMessage(msg, name, prob) {
-    let newMsg;
-    newMsg = msg.replace("userName", name)
-    newMsg = newMsg.replace("userProblem", prob)
+    
+ let msgArr = msg.split(" ")
 
-    return newMsg
+ msgArr.forEach(word => {
+     if (word.indexOf('userName') > -1) {
+
+        const newName = name + word.slice("userName".length)
+
+        msgArr[msgArr.indexOf(word)] = newName
+     } else if (word.indexOf('userProblem') > -1) {
+
+        const newProb = prob + word.slice("userProblem".length)
+
+        msgArr[msgArr.indexOf(word)] = newProb
+
+     }
+ })
+
+ return msgArr.join(" ")
+    
 }
