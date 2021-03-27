@@ -19,10 +19,15 @@ class Mentors extends React.Component {
         event.preventDefault();
   
         // render the Mentors using state info from here!
-        this.state.username = '';
-        this.state.problem = '';
-        this.state.response = false;
+        // this.state.username = '';
+        // this.state.problem = '';
+        // this.state.response = false;
 
+        this.state = {
+            username: '',
+            problem: '',
+            response: false,
+            }
         
         // sends to parent
         this.props.onUpdate(this.state)
