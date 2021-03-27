@@ -25,6 +25,9 @@ class UserInput extends React.Component {
   };
 
   searchDictionary = query => {
+    
+    // catch errors, if a word returns an error from the API, send a message that there was an error
+
     return new Promise(resolve => {
       // split the problem sentence into an arr of words
       const wordArr = query.split(" ")
@@ -40,6 +43,10 @@ class UserInput extends React.Component {
           }
         });
       });
+
+      // goes here if the user failed to send a statement containing a noun (according to Webster)
+      resolve('"' + query + '"')
+
     });
   };
 
