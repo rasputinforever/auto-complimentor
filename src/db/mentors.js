@@ -69,7 +69,7 @@ const MentorsDB = [
         messages: [
             `My dude: you can't let userProblem get in the way of saving for your future. Look at me, when I was 19 I started my own business and I retired by 30. userProblem or no userProblem, you gotta look out for number one!`,
             `userName, let me hook you up with a buddy of mine who's big into stocks. He actually got into Bitcoin recently too; definitely a real genius type. Spend an afternoon at his apartment and userProblem won't even register anymore.`,
-            `This is a basic statistics problem. userProblem is an outlier in an otherwise normal situation you're living. You're fixated on userProblem, you in fact think you're userProblem, but you're not userProblem: you are userName.`,
+            `This is a basic statistics problem. userProblem is an outlier in an otherwise normal situation you're living. You're so fixated on userProblem that you have become userProblem. You are userName, my friend, don't forget that.`,
             `Dude, I was watching History Channel last night and they were talking about userProblem in Nazi Germany. You wouldn't believe the kind of stuff going on there, it's amazing how people forget about the past.`,
             `userProblem is a lot like the Quadratic Equation, userName. It may seem really obtuse, large, overwhelming, but when you really get into it you realize it has it's own kind of beauty, know what I mean?`,
             `userName, my analytical mind tells me that your problem is that you think userProblem is a problem. If you just realize userProblem isn't a problem you'll be all set!`,
@@ -148,8 +148,5 @@ const MentorsDB = [
         ]
     },
 ]
-
-
-
 
 module.exports = MentorsDB;

@@ -25,21 +25,39 @@ class UserInput extends React.Component {
   };
 
   searchDictionary = query => {
-    API.search(query)
-      .then(res => console.log("API response: ", res))
-      .catch(err => console.log(err));
+    return new Promise(resolve => {
+      // split the problem sentence into an arr of words
+      const wordArr = query.split(" ")
+      // do an API call to find the word-type, looking for nouns
+      wordArr.forEach(word => {
+
+        API.search(word)
+        .then(res => {
+          const wordType = res.data[0].fl
+          if (wordType === 'noun') {
+
+            resolve(word);
+          }
+        });
+      });
+    });
   };
 
   handleFormSubmit = event => {
     event.preventDefault();
 
-    this.searchDictionary(this.state.problem);
-    // render the Mentors using state info from here!
-    this.state.response = true;
-    
-    // sends to parent
-    this.props.onUpdate(this.state)
+    this.searchDictionary(this.state.problem)
+    .then((res) => {
 
+      this.state.problem = res
+
+      // render the Mentors using state info from here!
+      this.state.response = true;
+      
+      // sends to parent
+      this.props.onUpdate(this.state)
+
+    });
   };
     
   render() {
@@ -70,7 +88,7 @@ class UserInput extends React.Component {
         </Row>
     );
   }
-  
+
 }
 
 export default UserInput;

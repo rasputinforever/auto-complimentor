@@ -13,15 +13,12 @@ class Body extends React.Component {
 
   handleInputChange = event => {
 
-    console.log("incoming event, ", event)
     // this is receiving info from the child form that is then transmitted to the Mentors class
     this.setState({ 
       username: event.username,
       problem: event.problem,
       response: event.response
      });
-
-     console.log("new state", this.state)
     
   };
 

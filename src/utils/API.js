@@ -9,7 +9,6 @@ const BASEURL = "https://www.dictionaryapi.com/api/v3/references/collegiate/json
 
 export default {
   search: function(query) {
-    console.log(BASEURL + query + API_KEY)
     return axios.get(BASEURL + query + API_KEY);
   }
 };
