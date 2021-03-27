@@ -13,63 +13,64 @@ class UserInput extends React.Component {
         }
   }
 
-    handleInputChange = event => {
-      const value = event.target.value;
-      const name = event.target.name;
-      
-      // Updating the input's state
-      this.setState({
-        [name]: value
-      });
-
-    };
-
-    searchDictionary = query => {
-      API.search(query)
-        .then(res => console.log("API response: ", res))
-        .catch(err => console.log(err));
-    };
-
-    handleFormSubmit = event => {
-      event.preventDefault();
-
-      this.searchDictionary(this.state.problem);
-      // render the Mentors using state info from here!
-      this.state.response = true;
-      
-      // sends to parent
-      this.props.onUpdate(this.state)
-
-    };
+  handleInputChange = event => {
+    const value = event.target.value;
+    const name = event.target.name;
     
-    render() {
-      return (
-          <Row>
-            <InputGroup className="mb-3">
-              <FormControl
-                value={this.state.firstName}
-                name="username"
-                onChange={this.handleInputChange}
-                type="text"
-                placeholder="Your Name"
-              />
-            </InputGroup>
-  
-            <InputGroup className="mb-3">
-              <FormControl
-                value={this.state.firstName}
-                name="problem"
-                onChange={this.handleInputChange}
-                type="text"
-                placeholder="Your Problem"
-              />
-            </InputGroup>
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
 
-            <button onClick={this.handleFormSubmit}>Submit</button>
+  };
 
-          </Row>
-      );
-    }
+  searchDictionary = query => {
+    API.search(query)
+      .then(res => console.log("API response: ", res))
+      .catch(err => console.log(err));
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+
+    this.searchDictionary(this.state.problem);
+    // render the Mentors using state info from here!
+    this.state.response = true;
+    
+    // sends to parent
+    this.props.onUpdate(this.state)
+
+  };
+    
+  render() {
+    return (
+        <Row>
+          <InputGroup className="mb-3">
+            <FormControl
+              value={this.state.firstName}
+              name="username"
+              onChange={this.handleInputChange}
+              type="text"
+              placeholder="Your Name"
+            />
+          </InputGroup>
+
+          <InputGroup className="mb-3">
+            <FormControl
+              value={this.state.firstName}
+              name="problem"
+              onChange={this.handleInputChange}
+              type="text"
+              placeholder="Your Problem"
+            />
+          </InputGroup>
+
+          <button onClick={this.handleFormSubmit}>Submit</button>
+
+        </Row>
+    );
   }
+  
+}
 
 export default UserInput;
