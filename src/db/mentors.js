@@ -28,7 +28,7 @@ const MentorsDB = [
             fontFamily: "Rockwell",
             fontSize: 32,
         },
-        image: 'dirk.jpg',
+        image: 'dirk.JPG',
         keyWords: ['fatherly', 'distracted', 'glory-days', 'boostraps'],
         messages: [
             'You know what I think, Sport? Sorry, sorry: userName. Anyway, I think you need to toughen up a bit. Get some grit, and tackle userProblem head on!',
@@ -46,7 +46,7 @@ const MentorsDB = [
             fontFamily: "Comic Sans MD",
             fontSize: 32,
         },
-        image: 'spot.jpg',
+        image: 'spot.JPG',
         keyWords: ['dog'],
         messages: [
             'Bark! Bark bark bark! (Spot is amused by userProblem)',
@@ -64,7 +64,7 @@ const MentorsDB = [
             fontFamily: "Didot",
             fontSize: 32,
         },
-        image: 'paul.jpg',
+        image: 'paul.JPG',
         keyWords: ['unrelated', 'specific', 'analytical'],
         messages: [
             `My dude: you can't let userProblem get in the way of saving for your future. Look at me, when I was 19 I started my own business and I retired by 30. userProblem or no userProblem, you gotta look out for number one!`,
@@ -83,7 +83,7 @@ const MentorsDB = [
             fontFamily: "Tangerine",
             fontSize: 34,
         },
-        image: 'cindy.jpg',
+        image: 'cindy.JPG',
         keyWords: ['waitress', 'diner', 'hurried'],
         messages: [
             `Hon, I got pork chops and the rib eye on special; sorry, not sure if that answered your question about userProblem.`,
@@ -101,7 +101,7 @@ const MentorsDB = [
             fontFamily: "Luminari",
             fontSize: 34,
         },
-        image: 'deego.jpg',
+        image: 'deego.JPG',
         keyWords: ['waitress', 'diner', 'hurried'],
         messages: [
             `In the fourth Age of Terra it was foretold by the Alanor that userProblem would rise again. After a millenium of peace a new era begins: the Age of userProblem.`,
@@ -119,7 +119,7 @@ const MentorsDB = [
             fontFamily: "Courier New",
             fontSize: 28,
         },
-        image: 'plork.jpg',
+        image: 'plork.JPG',
         keyWords: ['alien', 'nervous', 'hurried'],
         messages: [
             `Ha. Ha. Yes. I fully relate to your userProblem! I have also expereinced userProblem many times in my dozens of rotations! Ha. Ha.`,
@@ -137,7 +137,7 @@ const MentorsDB = [
             fontFamily: "",
             fontSize: 28,
         },
-        image: 'phillip.jpg',
+        image: 'phillip.JPG',
         keyWords: ['young', 'games', 'immature'],
         messages: [
             `userProblem? Of course I've heard of userProblem, I'm not an idiot. My brother, who actually is in college, told me userProblem is all over the place over there. He knows all about stuff like that.`,
