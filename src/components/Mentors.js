@@ -23,15 +23,17 @@ class Mentors extends React.Component {
         // this.state.problem = '';
         // this.state.response = false;
 
-        // render the Mentors using state info from here! Best Standard here.
-        this.state = {
+        // render the Mentors using state info from here! Best Standard here. It's asynchronous!
+        this.setState({ 
             username: '',
             problem: '',
-            response: false,
+            response: false, 
+            }, function () {
+                this.props.onUpdate(this.state)
             }
+        )
+            
         
-        // sends to parent
-        this.props.onUpdate(this.state)
 
     };
 
