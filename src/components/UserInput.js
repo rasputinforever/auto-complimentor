@@ -25,36 +25,35 @@ class UserInput extends React.Component {
   };
 
   searchDictionary = query => {
-    
-    // catch errors, if a word returns an error from the API, send a message that there was an error
-
-    return new Promise(resolve => {
-      // split the problem sentence into an arr of words
-      const wordArr = query.split(" ")
-      // do an API call to find the word-type, looking for nouns
-      wordArr.forEach(word => {
-
-        if (word.length > 2) {
-          API.search(word)
-          .then(res => {
-            const wordType = res.data[0].fl
-            if (wordType === 'noun') {
   
-              resolve(word);
-            }
-          });
+      return new Promise(resolve => {
+
+        // split the problem sentence into an arr of words
+        const wordArr = query.split(" ")
+        let foundWord = query;
+
+        // do an API call to find the word-type, looking for nouns
+
+        for (let i = 0; i < wordArr.length; i++) {
+
+            API.search(wordArr[i])
+            .then(res => {
+              const wordType = res.data[0].fl
+              if (wordType.length > 2 && wordType === 'noun') {
+                
+                foundWord = wordArr[i]
+              }
+            })
+            .then(() => {
+              if (i === wordArr.length - 1) {
+                resolve(foundWord)
+              }
+            })
         }
-
-
-        
-
-
       });
 
-      // goes here if the user failed to send a statement containing a noun (according to Webster)
-      resolve('"' + query + '"')
+      
 
-    });
   };
 
   handleFormSubmit = event => {
@@ -62,7 +61,6 @@ class UserInput extends React.Component {
 
     this.searchDictionary(this.state.problem)
     .then((res) => {
-
 
       this.setState({ 
         problem: res,
