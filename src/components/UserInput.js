@@ -49,13 +49,16 @@ class UserInput extends React.Component {
     this.searchDictionary(this.state.problem)
     .then((res) => {
 
-      this.state.problem = res
 
-      // render the Mentors using state info from here!
-      this.state.response = true;
+      this.setState({ 
+        problem: res,
+        response: true, 
+        }, function () {
+            this.props.onUpdate(this.state)
+        }
+      )
+
       
-      // sends to parent
-      this.props.onUpdate(this.state)
 
     });
   };
