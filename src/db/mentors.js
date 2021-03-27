@@ -10,7 +10,7 @@ const MentorsDB = [
             fontSize: 28,
             padding: '10px',
         },
-        image: 'susan.jpg',
+        image: 'susan.JPG',
         keyWords: ['motherly', 'coddling', 'calm', 'guilt'],
         messages: [
             `In my eyes, userName, you are perfect in every way. You make me so proud; you give my life so much purpose, thank you! I would never think userProblem could get in the way of any of that.`,
