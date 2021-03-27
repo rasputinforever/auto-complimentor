@@ -35,7 +35,7 @@ class Mentors extends React.Component {
             <Row className='mentorContainer'>
                 {
                 MentorsDB.map((mentor) => {
-                    const imgSrc = '/images/' + mentor.image
+                    const imgSrc = './images/' + mentor.image
                     const mentorMessage = messageRandomizer(mentor.messages)
                     const newMessage = transformMessage(mentorMessage, this.state.username, this.state.problem)
                     return (
