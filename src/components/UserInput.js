@@ -34,14 +34,21 @@ class UserInput extends React.Component {
       // do an API call to find the word-type, looking for nouns
       wordArr.forEach(word => {
 
-        API.search(word)
-        .then(res => {
-          const wordType = res.data[0].fl
-          if (wordType === 'noun') {
+        if (word.length > 2) {
+          API.search(word)
+          .then(res => {
+            const wordType = res.data[0].fl
+            if (wordType === 'noun') {
+  
+              resolve(word);
+            }
+          });
+        }
 
-            resolve(word);
-          }
-        });
+
+        
+
+
       });
 
       // goes here if the user failed to send a statement containing a noun (according to Webster)
