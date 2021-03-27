@@ -18,12 +18,7 @@ class Mentors extends React.Component {
     handleSubmitBtn = event => {
         event.preventDefault();
 
-        // This is the "old" way this was going and it is NOT how React wants to do it, per errors
-        // this.state.username = '';
-        // this.state.problem = '';
-        // this.state.response = false;
-
-        // render the Mentors using state info from here! Best Standard here. It's asynchronous!
+        // set this state and parent state
         this.setState({ 
             username: '',
             problem: '',
@@ -32,9 +27,7 @@ class Mentors extends React.Component {
                 this.props.onUpdate(this.state)
             }
         )
-            
         
-
     };
 
     render() {
