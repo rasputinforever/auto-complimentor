@@ -13,8 +13,6 @@ class UserInput extends React.Component {
         }
   }
 
-
-
     handleInputChange = event => {
       const value = event.target.value;
       const name = event.target.name;
@@ -28,7 +26,7 @@ class UserInput extends React.Component {
 
     searchDictionary = query => {
       API.search(query)
-        .then(res => console.log(res))
+        .then(res => console.log("API response: ", res))
         .catch(err => console.log(err));
     };
 
