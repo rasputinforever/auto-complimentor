@@ -1,5 +1,4 @@
-// this is going to be a dictionary query
-// https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=your-api-key
+// please add your own API key if you are running this on your local machine
 
 import axios from "axios";
 
