@@ -13,16 +13,17 @@ class Mentors extends React.Component {
             problem: props.problem,
             response: true
             }
-      }
+    }
 
-      handleSubmitBtn = event => {
+    handleSubmitBtn = event => {
         event.preventDefault();
-  
-        // render the Mentors using state info from here!
+
+        // This is the "old" way this was going and it is NOT how React wants to do it, per errors
         // this.state.username = '';
         // this.state.problem = '';
         // this.state.response = false;
 
+        // render the Mentors using state info from here! Best Standard here.
         this.state = {
             username: '',
             problem: '',
@@ -31,48 +32,48 @@ class Mentors extends React.Component {
         
         // sends to parent
         this.props.onUpdate(this.state)
-  
-      };
 
-      render() {
-          return (
+    };
+
+    render() {
+        return (
             <Row className='mentorContainer'>
                 {
-                    MentorsDB.map((mentor) => {
-                        const imgSrc = '/images/' + mentor.image
-                        const mentorMessage = messageRandomizer(mentor.messages)
-                        const newMessage = transformMessage(mentorMessage, this.state.username, this.state.problem)
-                        return (
-                            <Row className='mentorArticle' key={mentor.name}> 
-                                    <Col sm={3} className='mentorCard'>
-                                        <img src={imgSrc} alt={mentor.name} className='mentorImg' />
-                                        <h3>{mentor.name}</h3>
-                                        <p>Age: {mentor.age}</p>
-                                        <p>Location: {mentor.location}</p>
-                                    </Col>
-                                    <Col sm={8} className='mentorTextBox'>
-                                        <p className='mentorText' style={mentor.style}>{newMessage}</p>
-                                    </Col>
-                            </Row>
-                        )      
-                    })
+                MentorsDB.map((mentor) => {
+                    const imgSrc = '/images/' + mentor.image
+                    const mentorMessage = messageRandomizer(mentor.messages)
+                    const newMessage = transformMessage(mentorMessage, this.state.username, this.state.problem)
+                    return (
+                        <Row className='mentorArticle' key={mentor.name}> 
+                            <Col sm={3} className='mentorCard'>
+                                <img src={imgSrc} alt={mentor.name} className='mentorImg' />
+                                <h3>{mentor.name}</h3>
+                                <p>Age: {mentor.age}</p>
+                                <p>Location: {mentor.location}</p>
+                            </Col>
+                            <Col sm={8} className='mentorTextBox'>
+                                <p className='mentorText' style={mentor.style}>{newMessage}</p>
+                            </Col>
+                        </Row>
+                    )      
+                })
                 }
 
                 <button onClick={this.handleSubmitBtn}>New Advice...</button>
 
             </Row>
         )
-      }
+    }
 }
 
 export default Mentors;
 
+// helpers: can these be refactored somehow?
 function messageRandomizer(msgArr) {
 
     const msg = msgArr[Math.floor(Math.random() * msgArr.length)]
 
     return msg
-
 }
 
 function transformMessage(msg, name, prob) {
@@ -83,17 +84,15 @@ function transformMessage(msg, name, prob) {
         if (word.indexOf('userName') > -1) {
 
             const newName = name + word.slice("userName".length)
-
             msgArr[msgArr.indexOf(word)] = newName
+
         } else if (word.indexOf('userProblem') > -1) {
 
             const newProb = prob + word.slice("userProblem".length)
-
             msgArr[msgArr.indexOf(word)] = newProb
 
         }
     })
 
     return msgArr.join(" ")
-    
 }
