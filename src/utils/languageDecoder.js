@@ -24,8 +24,9 @@ function processArr(wordObjArr) {
     // this is where we're going to create the "logic" to figure out what the subject of the sentence is. 
 
     let newStringArr = [];
-    let nounArr = [];
-    let createdNew = false
+    
+    let newString = ''
+
     let index = 0
     // some sentences may detect two sub-strings of "subjects".
     wordObjArr.some(word => {
@@ -54,65 +55,41 @@ function processArr(wordObjArr) {
             }
 
             newStringArr.push(nounString.join(" "))
-            console.log(newStringArr.join(" "))
-            createdNew = true
-            return newStringArr.join(" ")
+            
+            newString = newStringArr.join(" ")
         }
 
         index++
 
     })
 
-    // fail safe here, join with quotes on the word 
-    if (!createdNew) {
 
-        console.log('"' + newStringArr.join(" ") + '"')
-        return '"' + newStringArr.join(" ") + '"'
+    // fail safe here, join with quotes on the word 
+    if (!newString) {
+
+        return false
 
     }
+
+    return newString
 
 }
 
 
 function procStatement(string) {
     return new Promise(resolve => {
-        console.log('processing string: ', string)
         const wordArr = string.split(" ")
+
 
         wordAPI(wordArr).then((res) => {
 
-            const newString = processArr(res)
-
-            resolve('testing0')
+            let newString = processArr(res)
+            if (!newString) {
+                newString = '"' + string + '"'
+            }
+            resolve(newString)
         })
     })
 }
 
 export default procStatement
-
-// return new Promise(resolve => {
-
-//     // split the problem sentence into an arr of words
-//     const wordArr = query.split(" ")
-//     let foundWord = "";
-
-//     // do an API call to find the word-type, looking for nouns
-
-//     for (let i = 0; i < wordArr.length; i++) {
-//       console.log(wordArr[i])
-      
-//         API.search(wordArr[i])
-//         .then(res => {
-//           const wordType = res.data[0].fl
-//           console.log(wordArr[i], "is a ", wordType)
-//           if (wordType === 'noun' || wordType === 'article' || wordType === 'adjective') {
-//             foundWord += " " + wordArr[i]
-//           }
-//         })
-//         .then(() => {
-//           if (i === wordArr.length - 1) {
-//             resolve(foundWord)
-//           }
-//         })
-//     }
-//   });
