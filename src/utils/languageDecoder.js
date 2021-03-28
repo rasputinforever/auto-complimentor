@@ -1,15 +1,18 @@
 import API from "./API";
 
 async function wordAPI(wordArr) {
-    
+    // thsi processes each word in the string, replacing each word with an object which includes wordType
     for (let i = 0; i < wordArr.length; i++) {
         const word = wordArr[i]
         await API.search(word)
                 .then(res => {
-                    
+                    // find first entry contining "fl"
+                    const foundType = res.data.find(obj => obj.fl);
+
+                    console.log(res.data)
                     wordArr[i] = {
                         'word': word,
-                        type: res.data[0].fl
+                        type: foundType.fl
                     }
 
                 })    
@@ -19,12 +22,53 @@ async function wordAPI(wordArr) {
 }
 
 function processArr(wordObjArr) {
+    // this is where we're going to create the "logic" to figure out what the subject of the sentence is. 
 
+    // words to skip: 'I'
+    const ignoreWords = ['I']
+    let newStringArr = [];
+    let nounArr = [];
+    let index = 0
+    // some sentences may detect two sub-strings of "subjects".
     wordObjArr.forEach(word => {
         console.log('processing ', word)
+
+        // skip 'I'
+        // definite article = 'the'
+        // keep the last noun
+        // keep the adjective before that noun if it exists
+
+        if (word.type === 'definite article') {
+            newStringArr.push(word.word)
+        } else if (word.word.toUpperCase != 'I' && word.type === 'noun') {
+
+            let nounString = [];
+
+            if (wordObjArr[index - 1] && wordObjArr[index - 1].type === 'adjective') {
+                nounString.push(wordObjArr[index - 1].word)
+            }
+            
+            if (word.type === 'noun') {
+                nounString.push(word.word)
+            }
+
+            if (wordObjArr[index + 1] && wordObjArr[index + 1].type === 'noun') {
+                nounString.push(wordObjArr[index + 1].word)
+            }
+
+            newStringArr.push(nounString.join(" "))
+            console.log(newStringArr.join(" "))
+            return newStringArr.join(" ")
+        }
+
+        index++
+
     })
 
-    return 'still testing'
+    // fail safe here, join with quotes on the word 
+    console.log('"' + newStringArr.join(" ") + '"')
+     return '"' + newStringArr.join(" ") + '"'
+
 }
 
 
@@ -39,9 +83,6 @@ function procStatement(string) {
 
             resolve('testing0')
         })
-
-
-
     })
 }
 
