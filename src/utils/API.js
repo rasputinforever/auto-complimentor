@@ -11,5 +11,3 @@ export default {
     return axios.get(BASEURL + query + API_KEY);
   }
 };
-
-

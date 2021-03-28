@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, InputGroup, FormControl } from 'react-bootstrap';
-import API from "../utils/API";
+import procString from "../utils/languageDecoder.js"
 import ErrorMsg from "./inputError.js"
 
 class UserInput extends React.Component {
@@ -29,33 +29,8 @@ class UserInput extends React.Component {
 
   searchDictionary = query => {
   
-      return new Promise(resolve => {
+     return procString(query)
 
-        // split the problem sentence into an arr of words
-        const wordArr = query.split(" ")
-        let foundWord = '"' + query + '"';
-
-        // do an API call to find the word-type, looking for nouns
-
-        for (let i = 0; i < wordArr.length; i++) {
-
-            API.search(wordArr[i])
-            .then(res => {
-              const wordType = res.data[0].fl
-              if (wordArr[i].length > 2 && wordType === 'noun') {
-                
-                foundWord = wordArr[i]
-              }
-            })
-            .then(() => {
-              if (i === wordArr.length - 1) {
-                resolve(foundWord)
-              }
-            })
-        }
-      });
-
-      
 
   };
 
