@@ -30,14 +30,6 @@
     margin: auto;
 }
 
-.card {
-    padding: 15px;
-    background-color: lightpink;
-    margin-bottom: 20px;
-    border-width: 3px;
-    border-color: white;
-}
-
 body {
     padding: 10px;
     background-image: url("/images/bg.jpg");
@@ -58,7 +50,10 @@ body {
 .introText {
     font-size: 14px;
     margin: 20px;
-    font-family:'Lucida Sans';
+    font-family:'Arial';
+    font-weight: bolder;
+    color: black;
+
 }
 
 .submitBtn {
@@ -73,4 +68,17 @@ body {
     background-color: lightblue;
     color: darkblue;
     
+}
+
+.cardHeader {
+    background-image: linear-gradient(rgba(0, 190, 255, 0.5), rgba(255, 255, 0, 0.5)),
+     url("/images/headerBg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 15px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-width: 3px;
+    border-color: white;
+    text-align: center;
 }

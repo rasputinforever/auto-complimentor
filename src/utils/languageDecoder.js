@@ -44,7 +44,7 @@ function processArr(wordObjArr) {
 
             let nounString = [];
 
-            if (wordObjArr[index - 1].word.toUpperCase() != 'MY' && wordObjArr[index - 1] && wordObjArr[index - 1].type === 'adjective') {
+            if (wordObjArr[index - 1] && wordObjArr[index - 1].word.toUpperCase() != 'MY' && wordObjArr[index - 1].type === 'adjective') {
                 nounString.push(wordObjArr[index - 1].word)
             }
             

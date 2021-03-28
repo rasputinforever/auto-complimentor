@@ -33,7 +33,7 @@ class Mentors extends React.Component {
     render() {
         return (
             <Row className='mentorContainer'>
-                <Card className='header'>
+                <Card className="cardHeader">
                     <h2 className="">Your Mentors have Responded...</h2>
                 </Card>
                 {
