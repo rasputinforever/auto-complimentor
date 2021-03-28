@@ -1,7 +1,7 @@
 import API from "./API";
 
 async function wordAPI(wordArr) {
-    // thsi processes each word in the string, replacing each word with an object which includes wordType
+    // this processes each word in the string, replacing each word with an object which includes wordType
     for (let i = 0; i < wordArr.length; i++) {
         const word = wordArr[i]
         await API.search(word)
