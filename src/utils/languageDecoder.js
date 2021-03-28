@@ -38,7 +38,9 @@ function processArr(wordObjArr) {
 
         if (word.type === 'definite article') {
             newStringArr.push(word.word)
-        } else if (word.word.toUpperCase != 'I' && word.type === 'noun') {
+        } else if (word.word.toUpperCase() === 'I'){
+            newStringArr.push("your")
+        } else if (word.word.toUpperCase() != 'I' && word.type === 'noun') {
 
             let nounString = [];
 
