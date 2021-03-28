@@ -38,13 +38,13 @@ function processArr(wordObjArr) {
 
         if (word.type === 'definite article') {
             newStringArr.push(word.word)
-        } else if (word.word.toUpperCase() === 'I'){
+        } else if (word.word.toUpperCase() === 'I' || word.word.toUpperCase() === 'MY'){
             newStringArr.push("your")
-        } else if (word.word.toUpperCase() != 'I' && word.type === 'noun') {
+        } else if (word.word.toUpperCase() != 'I' && word.word.toUpperCase() != 'MY' && word.type === 'noun') {
 
             let nounString = [];
 
-            if (wordObjArr[index - 1] && wordObjArr[index - 1].type === 'adjective') {
+            if (wordObjArr[index - 1].word.toUpperCase() != 'MY' && wordObjArr[index - 1] && wordObjArr[index - 1].type === 'adjective') {
                 nounString.push(wordObjArr[index - 1].word)
             }
             
