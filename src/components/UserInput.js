@@ -67,7 +67,8 @@ class UserInput extends React.Component {
         <Card>
           <div className="header">
             <h3>Auto CompliMentor</h3>
-            <p id="introText">Welcome to the only Automaitc, Complimentary Mentoring system. Please provide your name and a brief description of your current problem, issue, or trouble below. Our Auto Compli-Mentors will see you soon!</p>
+            <p className="introText">Welcome to the only <u>Automaitc, Complimentary Mentoring</u> system. Our team of advisors are experts at providing good, solid, sound advice. "ACM" has specially designed this team to thoughtfully, and carefully consider your issues and deliver a response that they "believe" will help you on your way.</p>
+            <p className="introText">Please fill the following form with your name and a brief description of your problem:</p>
           </div>
           {this.state.error === true ? <ErrorMsg /> : <></>}
           

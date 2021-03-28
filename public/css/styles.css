@@ -34,6 +34,8 @@
     padding: 15px;
     background-color: lightpink;
     margin-bottom: 20px;
+    border-width: 3px;
+    border-color: white;
 }
 
 body {
@@ -49,12 +51,14 @@ body {
     width: 100%;
     text-align: center;
     font-family: Helvetica, sans-serif;
-    
+    font-family:'Lucida Sans';
+
 }
 
-#introText {
-    size: 20px;
+.introText {
+    font-size: 14px;
     margin: 20px;
+    font-family:'Lucida Sans';
 }
 
 .submitBtn {

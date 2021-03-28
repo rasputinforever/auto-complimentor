@@ -26,6 +26,7 @@ Webster's Dictionary provides a free API for definition lookups. Single-word que
 Language, english in particular, is very challenging to "decode" and inject into template statements. Considerations like:
 * Is there a "definite article" such as the word "the": we want to keep that.
 * Which noun in a sentence is the "subject". This app assumes the first noun (that isn't he word "I") is the subject.
+* "My" and "I" are handled similarly. It is replaced by "your" and in many cases is sounds either correct or funny.
 * Does the subject-noun have "helper" or "related" words surrounding it? Adjectives we want to keep, this app keeps the preceding adjective. A related noun is for concepts like "hat hair" which are nouns that mean something else when combined. This app keeps up to THREE words in a row in and around the first found noun.
 
 The other way to get around confusion is to build the template responses in such a way that they can accept "plural" or "singular" nouns. They must be ambiguous. This is where creativity comes into play. These "mentors" are meant to sound like "tin boxes" where they aren't really listening to you. Like a "bot" or, more to this app's focus, un-caring sources of advice, the generated responses are actually meant to sound kind of like the "mentor" isn't paying attention, doesn't understand whatever it is you are talking about, or completely misunderstands whatever it is you wrote. Injecting actual strings is why its interesting, the string content is why it's "funny".
