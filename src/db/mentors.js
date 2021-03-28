@@ -6,7 +6,7 @@ const MentorsDB = [
         age: '58',
         location: 'Phoenix, Arizona',
         style: {
-            fontFamily: 'Permenant Marker',
+            fontFamily: 'Arial',
             fontSize: 28,
             padding: '10px',
         },
@@ -43,7 +43,7 @@ const MentorsDB = [
         age: '1',
         location: 'Portland, Oregon',
         style: {
-            fontFamily: "Comic Sans MD",
+            fontFamily: "cursive",
             fontSize: 32,
         },
         image: 'spot.JPG',
@@ -61,7 +61,7 @@ const MentorsDB = [
         age: '32',
         location: 'Los Angeles, California',
         style: {
-            fontFamily: "Didot",
+            fontFamily: "Tahoma",
             fontSize: 32,
         },
         image: 'paul.JPG',
@@ -80,8 +80,8 @@ const MentorsDB = [
         age: '42',
         location: 'Tulsa, Oklahoma',
         style: {
-            fontFamily: "Tangerine",
-            fontSize: 34,
+            fontFamily: "Brush Script MT,cursive",
+            fontSize: 38,
         },
         image: 'cindy.JPG',
         keyWords: ['waitress', 'diner', 'hurried'],
@@ -96,9 +96,9 @@ const MentorsDB = [
     {
         name: 'Deego',
         age: '1087',
-        location: ' Montpelier, Vermont',
+        location: 'Montpelier, Vermont',
         style: {
-            fontFamily: "Luminari",
+            fontFamily: "papyrus",
             fontSize: 34,
         },
         image: 'deego.JPG',

@@ -34,7 +34,7 @@ class Mentors extends React.Component {
         return (
             <Row className='mentorContainer'>
                 <Card className='header'>
-                    <h3 className="">Your Mentors have Responded...</h3>
+                    <h2 className="">Your Mentors have Responded...</h2>
                 </Card>
                 {
                 MentorsDB.map((mentor) => {
