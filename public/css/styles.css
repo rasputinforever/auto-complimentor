@@ -3,6 +3,11 @@
     margin-top: 5px;
 }
 
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .mentorArticle {
     width: 100%;
     margin-bottom: 20px;
@@ -27,7 +32,8 @@
 
 .card {
     padding: 15px;
-    opacity: 90%;
+    background-color: lightpink;
+    margin-bottom: 20px;
 }
 
 body {
@@ -37,12 +43,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-
-
 }
 
 .header {
-
+    width: 100%;
+    text-align: center;
 }
 
 #introText {

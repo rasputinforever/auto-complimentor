@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Card } from 'react-bootstrap';
 
 // db array
 const MentorsDB = require("../db/mentors.js")
@@ -33,6 +33,9 @@ class Mentors extends React.Component {
     render() {
         return (
             <Row className='mentorContainer'>
+                <Card className='header'>
+                    <h3 className="">Your Mentors have Responded...</h3>
+                </Card>
                 {
                 MentorsDB.map((mentor) => {
                     const imgSrc = './images/' + mentor.image
