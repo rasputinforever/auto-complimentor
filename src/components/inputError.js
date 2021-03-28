@@ -4,7 +4,9 @@ class ErrorMsg extends React.Component {
 
     render() {
         return (
-            <h3>Please Enter a Problem!</h3>
+            
+            <h3 className='error-message'>Please Enter a Problem!</h3>
+            
         )
     }
 

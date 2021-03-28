@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, InputGroup, FormControl } from 'react-bootstrap';
+import { Card, InputGroup, FormControl } from 'react-bootstrap';
 import API from "../utils/API";
 import ErrorMsg from "./inputError.js"
 
@@ -89,9 +89,16 @@ class UserInput extends React.Component {
     
   render() {
     return (
-        <Row>
+        <Card>
+          <div className="header">
+            <h3>Auto CompliMentor</h3>
+            <p id="introText">Welcom to the only Automaitc, Complimentary Mentoring system. Please pride your name and a brief description of your current problem, issue, or trouble below. Our Auto Compli-Mentors will see you soon!</p>
+          </div>
+          {this.state.error === true ? <ErrorMsg /> : <></>}
+          
           <InputGroup className="mb-3">
             <FormControl
+              className='inputBox'
               value={this.state.firstName}
               name="username"
               onChange={this.handleInputChange}
@@ -102,6 +109,7 @@ class UserInput extends React.Component {
 
           <InputGroup className="mb-3">
             <FormControl
+              className='inputBox'
               value={this.state.firstName}
               name="problem"
               onChange={this.handleInputChange}
@@ -110,12 +118,11 @@ class UserInput extends React.Component {
             />
           </InputGroup>
 
-          <button onClick={this.handleFormSubmit}>Submit</button>
+          <div className='submitBtn' onClick={this.handleFormSubmit}>Submit</div>
           
-          <Row>{this.state.error === true ? <ErrorMsg /> : <></>}</Row>
 
 
-        </Row>
+        </Card>
     );
   }
 

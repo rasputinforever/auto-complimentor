@@ -54,7 +54,7 @@ class Mentors extends React.Component {
                 })
                 }
 
-                <button onClick={this.handleSubmitBtn}>New Advice...</button>
+                <button className="submitBtn" onClick={this.handleSubmitBtn}>New Advice...</button>
 
             </Row>
         )
