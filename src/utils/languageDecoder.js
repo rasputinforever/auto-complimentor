@@ -39,10 +39,10 @@ function processArr(wordObjArr) {
             newStringArr.push(word.word)
         } else if (word.word.toUpperCase() === 'I' || word.word.toUpperCase() === 'MY'){
             newStringArr.push("your")
-        } else if (nounString.length === 0 && word.word.toUpperCase() != 'I' && word.word.toUpperCase() != 'MY' && word.type === 'noun') {
+        } else if (nounString.length === 0 && word.word.toUpperCase() !== 'I' && word.word.toUpperCase() !== 'MY' && word.type === 'noun') {
             
 
-            if (wordObjArr[index - 1] && wordObjArr[index - 1].word.toUpperCase() != 'MY' && wordObjArr[index - 1].type === 'adjective') {
+            if (wordObjArr[index - 1] && wordObjArr[index - 1].word.toUpperCase() !== 'MY' && wordObjArr[index - 1].type === 'adjective') {
                 nounString.push(wordObjArr[index - 1].word)
             }
             
