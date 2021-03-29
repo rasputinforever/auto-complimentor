@@ -7,6 +7,7 @@
 Auto Compli-Mentor is a mentoring system for any person in need of advice or encouragement. Submit your problems to our team of Auto-Experts and you will be provided Complimentory Mentoring!
 
 [Auto Compli-Mentor on Heroku!](https://hidden-spire-93760.herokuapp.com/)
+[Auto Compli-Mentor on AWS!](https://main.d3l3xweb6e8q2c.amplifyapp.com/)
 
 ## Getting Started
 If you are cloning this repo to host on your own local machine please be sure to send "npm i" to ensure you have all required React and Node.js modules. 
@@ -20,6 +21,9 @@ React is a node.js tool that has a lot of potential not yet unlocked ont his app
 
 ### Heroku
 Heroku provides the platform from which this React, Node.js application can run. It does not have a true "back-end" at this time, no database, simply a long array of content.
+
+### AWS
+AWS is an Amazon-owned tool for website deployment. They offer free hosting with randomized URL paths. Trying it out here as a demonstration.
 
 ### 3rd Party API - Async
 Webster's Dictionary provides a free API for definition lookups. Single-word queries return an array of definitions and within those definitions are the "word type" attribute which is key for decoding the content submitted by the user
