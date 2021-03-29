@@ -28,7 +28,7 @@ class Body extends React.Component {
           
           {this.state.response === false ? <UserInput username={this.state.username} problem={this.state.problem} onUpdate={this.handleInputChange}/> : <></>}
           {this.state.response === true ? <Mentors username={this.state.username} problem={this.state.problem} onUpdate={this.handleInputChange}/> : <></>}
-
+          <div className="footerText">Created by <a href="https://github.com/rasputinforever">Erik Portillo</a>, 2021</div>
         </Container>
       );
     }
