@@ -6,8 +6,10 @@ const { API_KEY } = require('./config.js')
 
 const BASEURL = "https://www.dictionaryapi.com/api/v3/references/collegiate/json/";
 
-export default {
+const API = {
   search: function(query) {
     return axios.get(BASEURL + query + API_KEY);
   }
 };
+
+export default API
