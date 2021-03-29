@@ -30,7 +30,7 @@ function processArr(wordObjArr) {
     let nounString = [];
 
     // some sentences may detect two sub-strings of "subjects".
-    wordObjArr.some(word => {
+    wordObjArr.forEach(word => {
         // replace I and MY with "Your"
         // definite article = 'the', keep that
         // the first noun is the best noun
