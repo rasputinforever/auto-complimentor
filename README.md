@@ -46,6 +46,11 @@ The other way to get around confusion is to build the template responses in such
 
 In short, it's a feature, not a bug.
 
+Here's a real list of bugs:
+* Sentences that end in adjectives and contain "are", like "My feet are stinky" gives back "feet are". No good.
+* Sentences where "I am"/"I'm" are followed by "being" such as "I'm being a brat". Being is repeated.
+* Sentences staring with "a" like "a big baby". "A" is a noun and not developed to be considered.
+
 ## Future Implementations
 
 ### MongoDB
