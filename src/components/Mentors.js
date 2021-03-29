@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Card } from 'react-bootstrap';
 
-// db array
+// pseudo-db array
 const MentorsDB = require("../db/mentors.js")
 
 class Mentors extends React.Component {
@@ -41,6 +41,8 @@ class Mentors extends React.Component {
                     const imgSrc = './images/' + mentor.image
                     const mentorMessage = messageRandomizer(mentor.messages)
                     const newMessage = transformMessage(mentorMessage, this.state.username, this.state.problem)
+                    // uppercase the first letter of the message
+                    const improvedMsg = newMessage.charAt(0).toUpperCase() + newMessage.slice(1);
                     return (
                         <Row className='mentorArticle' key={mentor.name}> 
                             <Col sm={3} className='mentorCard'>
@@ -50,7 +52,7 @@ class Mentors extends React.Component {
                                 <p>Location: {mentor.location}</p>
                             </Col>
                             <Col sm={8} className='mentorTextBox'>
-                                <p className='mentorText' style={mentor.style}>{newMessage}</p>
+                                <p className='mentorText' style={mentor.style}>{improvedMsg}</p>
                             </Col>
                         </Row>
                     )      
