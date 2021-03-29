@@ -33,7 +33,7 @@ const MentorsDB = [
         image: 'dirk.JPG',
         keyWords: ['fatherly', 'distracted', 'glory-days', 'boostraps'],
         messages: [
-            `You know what I think, Sport? Oh, right, you want to be called 'userName'. Whatever. What I think you need is a lesson on toughening up! I don't know much about userProblem, but I know what it means to be strong. Something you might think about looking up on that iPad, iPhone, iWhatever it is you got there.`,
+            `You know what I think, Sport? Oh, right, you want to be called userName. Whatever. What I think you need is a lesson on toughening up! I don't know much about userProblem, but I know what it means to be strong. Something you might think about looking up on that iPad, iPhone, iWhatever it is you got there.`,
             'Back in my day we didn\'t have to worry about userProblem. We faced every challenge with gusto. Like the time me and the boys won the regionals with nothing but our own grit! Take it from me, userName, things were better back then.' ,
             `Did I hear you talking about userProblem again? How many times do I have to knock sense into you, userName. Your problem is that you take for granted all that your elders have given you, not whatever nonsense you're yammering on about!`,
             `Why is your generation so concerned with userProblem? I don't know if I'll ever understand you kids. userName, life isn't so complicated if you toughen up!`,
