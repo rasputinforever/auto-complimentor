@@ -93,7 +93,7 @@ const MentorsDB = [
             `Hon, I got pork chops and the rib eye on special; sorry, not sure if that answered your question about userProblem.`,
             `I got userProblem that you ordered, sweetie. By the way, I'm taking a 15 minute break so Jose over there is going to check in on you here in a minute. Enjoy!`,
             `Did you want a slice of pie? Just the check? Oh, and a doggie bag for userProblem? Ok, be right back.`,
-            `I actually really enjoy "userProblem and onions as a dinner, call me crazy, but it's really surprisingly good if you give it a chance.`,
+            `I actually really enjoy userProblem and onions as a dinner, call me crazy, but it's really surprisingly good if you give it a chance.`,
             `Is Diet userProblem OK?`,
         ]
     },
@@ -149,7 +149,7 @@ const MentorsDB = [
         messages: [
             `Oh, userProblem? Of course I've heard of userProblem, I'm not a baby. My brother, who is in college, told me userProblem is all over the place over there. He knows all about stuff like that.`,
             `Hey, userName, what's up? What's that about userProblem? Oh, yeah, I know all about userProblem. My friend from middle school used to talk about stuff like that all the time. He was a pretty big nerd, but he was actually really cool.`,
-            `Oh, userName, you want to come over tonight and play userProblem? I never heard of that game but I do have an XBOX and Playstation so I think we can get it going.`,
+            `Oh, userName, you want to come over tonight and play that new game " userProblem "? I never heard of that game but I do have an XBOX and Playstation so I think we can get it going.`,
             `My sister is always going on about userProblem. She is so annoying. I can't believe I used to be a 6th grader. I was never that lame, though, know what I mean userName?`,
             `Hey, I'll catch up with you at Math, userName, the bell just rang! Ask me about userProblem after school!`
         ]

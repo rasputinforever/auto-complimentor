@@ -21,7 +21,6 @@ async function wordAPI(wordArr) {
 
 function processArr(wordObjArr) {
     // this is where we're going to create the "logic" to figure out what the subject of the sentence is. 
-    console.log(wordObjArr)
     let newStringArr = [];
     
     let newString = ''
@@ -32,18 +31,15 @@ function processArr(wordObjArr) {
 
     // some sentences may detect two sub-strings of "subjects".
     wordObjArr.some(word => {
-        console.log("Checking ", word)
-        // skip 'I'
+        // replace I and MY with "Your"
         // definite article = 'the', keep that
         // the first noun is the best noun
         // keep the adjective before that noun if it exists AND a noun that follows if that exists
-        console.log(nounString.length)
         if (word.type === 'definite article') {
             newStringArr.push(word.word)
         } else if (word.word.toUpperCase() === 'I' || word.word.toUpperCase() === 'MY'){
             newStringArr.push("your")
         } else if (nounString.length === 0 && word.word.toUpperCase() != 'I' && word.word.toUpperCase() != 'MY' && word.type === 'noun') {
-            console.log("Found noun: ", word.word)
             
 
             if (wordObjArr[index - 1] && wordObjArr[index - 1].word.toUpperCase() != 'MY' && wordObjArr[index - 1].type === 'adjective') {
