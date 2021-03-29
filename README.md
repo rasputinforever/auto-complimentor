@@ -2,6 +2,8 @@
 
 ## Introduction
 
+![autoCompliMentor](public/images/readMe.JPG)
+
 Auto Compli-Mentor is a mentoring system for any person in need of advice or encouragement. Submit your problems to our team of Auto-Experts and you will be provided Complimentory Mentoring!
 
 [Auto Compli-Mentor on Heroku!](https://hidden-spire-93760.herokuapp.com/)
@@ -42,6 +44,7 @@ One major improvement this app is ready for is integration to Mongo. The "databa
 With MongoDB is the potential to integrade more CRUD operations.
 * Users "vote" on replies they found useful. If a mentor has more votes, that could resolve into some logic that affects if that particular mentor appears more often than not.
 * User-specific statistics. Perhaps the mentors don't all display each time, maybe some are "rare", and depending on how much the user uses the app, the more rare mentors appear. 
+* Another perhaps more fun idea would be to allow users to give thumbs up/down on mentor responses. The more downs you give, the angrier and hostile the mentor gets. It may even get to the point that they no longer appear for you. The more positive, the more you might learn about that mentors potentially interesting backstory. Integrating to MongoDB would be making it user-specific the "state" of each mentor's "mood" as you give up/downs to messages. I would also have their background DIVs turn firey as they became more upset, and "heavenly" as they came to love you.
 
 ## Credits
 
