@@ -37,7 +37,7 @@ const MentorsDB = [
             'Back in my day we didn\'t have to worry about userProblem. We faced every challenge with gusto. Like the time me and the boys won the regionals with nothing but our own grit! Take it from me, userName, things were better back then.' ,
             `Did I hear you talking about userProblem again? How many times do I have to knock sense into you, userName. Your problem is that you take for granted all that your elders have given you, not whatever nonsense you're yammering on about!`,
             `Why is your generation so concerned with userProblem? I don't know if I'll ever understand you kids. userName, life isn't so complicated if you toughen up!`,
-            `In the old days we used to call a spade a spade. Now, you can't even open your mouth about something like userProblem without hearing about it from your generation, userName. What's the big deal, just get over your problems and get back to work!`,
+            `In the old days we used to call a spade a spade. Now, you can't even open your mouth about something like userProblem without hearing about it from people like you, userName. What's the big deal, just get over your problems and get back to work!`,
             `What do you want, userName? Can't you see I'm watching the game? What did you say about userProblem? I don't know, go ask your dang yahoo or jeeves or whatever it is, can't you see I'm busy?`,
             `The golden age of music, TV, and movies is over. It ended before you were even born. Young people like you, userName, are obsessed with stuff like userProblem. Such a waste, did you not learn anything from us?`
         ]
@@ -73,7 +73,7 @@ const MentorsDB = [
         messages: [
             `My dude: you can't let userProblem get in the way of what really matters right now: saving for your future. Look at me, when I was 19 I started my own business and I retired by 30. userProblem or not, you gotta look to the future, dude!`,
             `userName, let me hook you up with a buddy of mine who's big into stocks. He actually got into Bitcoin recently too, you could call him, like, the modern-day Bill Gates. Definitely a real genius type. Anyway, let me get you his pager number, call him up, tell him I sent you, and spend an afternoon at his apartment. After a few minutes with my guy userProblem won't even register anymore.`,
-            `This is a basic statistics problem, dude: userProblem is an outlier in an otherwise normal life you're living, userName. You gotta get beyond it, stop living in the foothills, you are the apex of your own distribution, my friend.`,
+            `This is a basic statistics problem, dude: userProblem is an outlier in an otherwise normal life you're living, userName. You gotta get beyond it, stop living in the foothills, you are the apex of your own distribution, userName.`,
             `Dude, I was watching History Channel last night and they were talking about userProblem in Nazi Germany. You wouldn't believe the kind of stuff going on there, it's amazing how people forget about the past.`,
             `Your deal with userProblem is a lot like calculus. Don't let it intimidate you, userName, it's just another chapter in the endless semester of userName 101.`,
             `userName, my analytical mind tells me that your problem is that you think userProblem is a problem. If you just realize userProblem isn't a problem you'll be all set!`,
@@ -149,7 +149,7 @@ const MentorsDB = [
         messages: [
             `Oh, userProblem? Of course I've heard of userProblem, I'm not a baby. My brother, who is in college, told me userProblem is all over the place over there. He knows all about stuff like that.`,
             `Hey, userName, what's up? What's that about userProblem? Oh, yeah, I know all about userProblem. My friend from middle school used to talk about stuff like that all the time. He was a pretty big nerd, but he was actually really cool.`,
-            `Oh, userName, you want to come over tonight and play that new game " userProblem "? I never heard of that game but I do have an XBOX and Playstation so I think we can get it going.`,
+            `Oh, userName, you want to come over tonight and play that new game "Call of userProblem "? I never heard of that game but I do have an XBOX and Playstation so I think we can get it going.`,
             `My sister is always going on about userProblem. She is so annoying. I can't believe I used to be a 6th grader. I was never that lame, though, know what I mean userName?`,
             `Hey, I'll catch up with you at Math, userName, the bell just rang! Ask me about userProblem after school!`
         ]
