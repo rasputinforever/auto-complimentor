@@ -82,3 +82,13 @@ body {
     border-color: white;
     text-align: center;
 }
+
+.footerText {
+    color: white;
+    font-weight: bolder
+}
+
+a {
+    color: lightgreen;
+    text-decoration: underline;
+}
