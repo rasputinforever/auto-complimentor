@@ -7,6 +7,7 @@
 Auto Compli-Mentor is a mentoring system for any person in need of advice or encouragement. Submit your problems to our team of Auto-Experts and you will be provided Complimentory Mentoring!
 
 [Auto Compli-Mentor on Heroku!](https://hidden-spire-93760.herokuapp.com/)
+
 [Auto Compli-Mentor on AWS!](https://main.d3l3xweb6e8q2c.amplifyapp.com/)
 
 ## Getting Started
@@ -24,6 +25,11 @@ Heroku provides the platform from which this React, Node.js application can run.
 
 ### AWS
 AWS is an Amazon-owned tool for website deployment. They offer free hosting with randomized URL paths. Trying it out here as a demonstration.
+
+## Host Lighthouse Comparison
+
+![autoCompliMentor](public/images/lighthouse.JPG)
+
 
 ### 3rd Party API - Async
 Webster's Dictionary provides a free API for definition lookups. Single-word queries return an array of definitions and within those definitions are the "word type" attribute which is key for decoding the content submitted by the user
