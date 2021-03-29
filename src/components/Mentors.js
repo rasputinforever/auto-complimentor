@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Card } from 'react-bootstrap';
-
+import { messageRandomizer, transformMessage } from '../utils/mentorMsgTools.js'
 // pseudo-db array
 const MentorsDB = require("../db/mentors.js")
 
@@ -67,32 +67,3 @@ class Mentors extends React.Component {
 }
 
 export default Mentors;
-
-// helpers: can these be refactored somehow?
-function messageRandomizer(msgArr) {
-
-    const msg = msgArr[Math.floor(Math.random() * msgArr.length)]
-
-    return msg
-}
-
-function transformMessage(msg, name, prob) {
-    
-    let msgArr = msg.split(" ")
-
-    msgArr.forEach(word => {
-        if (word.indexOf('userName') > -1) {
-
-            const newName = name + word.slice("userName".length)
-            msgArr[msgArr.indexOf(word)] = newName
-
-        } else if (word.indexOf('userProblem') > -1) {
-
-            const newProb = prob + word.slice("userProblem".length)
-            msgArr[msgArr.indexOf(word)] = newProb
-
-        }
-    })
-
-    return msgArr.join(" ")
-}
