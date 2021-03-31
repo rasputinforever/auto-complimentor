@@ -27,26 +27,27 @@ function processArr(wordObjArr) {
     let nounString = [];
     let possessiveCheck = false;
 
-    wordObjArr.some(word => {
+    wordObjArr.forEach(word => {
 
         if (word.type === 'definite article') {
             newStringArr.push(word.word)
         } else if (!possessiveCheck && wordObjArr[index + 1] && word.word.charAt(0).toUpperCase() === 'I') {
-            // dealing with "I am" or "I'm"
+            // dealing with posessives
             possessiveCheck = true
 
             // check if "being" exists in the string
             const beingCheck = wordObjArr.find(obj => obj.word === 'being'); 
 
+            // I have... etc
             if (word.word.toUpperCase() === `I` && wordObjArr[index + 1].word.toUpperCase() === 'HAVE') {
                 newStringArr.push('having')
                 wordObjArr.splice(index, 2)
 
+            // I'm or I AM here
             } if (word.word.toUpperCase() === 'I' && wordObjArr[index + 1].word.toUpperCase() === 'AM') {
                 wordObjArr.splice(index, 2)
                 if (!beingCheck) {newStringArr.push('being')}
             }
-
             if (word.word.toUpperCase() === `I'M`) {
                 wordObjArr.splice(index, 1)
                 if (!beingCheck) {newStringArr.push('being')}
@@ -57,7 +58,7 @@ function processArr(wordObjArr) {
             })
 
             newString = newStringArr.join(" ")
-            return newString
+       
 
         } else if (!possessiveCheck) {
             if (word.word.toUpperCase() === 'I' || word.word.toUpperCase() === 'MY'){
@@ -79,7 +80,6 @@ function processArr(wordObjArr) {
                 newStringArr.push(nounString.join(" "))
         
                 newString = newStringArr.join(" ")
-                return newString
             }
         }
 
