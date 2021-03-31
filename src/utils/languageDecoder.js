@@ -32,33 +32,31 @@ function processArr(wordObjArr) {
         // definite article = 'the', keep that
         // the first noun is the best noun
         // keep the adjective before that noun if it exists AND a noun that follows if that exists
-        console.log("Checking ", word.word)
-        console.log("Checking possessive", !possessiveCheck)
+
         if (word.type === 'definite article') {
             newStringArr.push(word.word)
         } else if (!possessiveCheck && wordObjArr[index + 1] && word.word.charAt(0).toUpperCase() === 'I') {
             // dealing with "I am" or "I'm"
             possessiveCheck = true
-            console.log("Inside possessive proc")
+
+            // check if "being" exists in the string
+            const beingCheck = wordObjArr.find(obj => obj.word === 'being'); 
+
             if (word.word.toUpperCase() === 'I' && wordObjArr[index + 1].word.toUpperCase() === 'AM') {
                 wordObjArr.splice(index, 2)
-                newStringArr.push('being')
+                if (!beingCheck) {newStringArr.push('being')}
             }
 
             if (word.word.toUpperCase() === `I'M`) {
-                console.log(" found I'm ")
                 wordObjArr.splice(index, 1)
-                newStringArr.push('being')
+                if (!beingCheck) {newStringArr.push('being')}
             }
-
-            console.log("new string", newStringArr)
 
             wordObjArr.forEach(subWord => {
                 newStringArr.push(subWord.word)
             })
             newString = newStringArr.join(" ")
 
-            console.log("new string", newStringArr)
 
         } else if (!possessiveCheck) {
             if (word.word.toUpperCase() === 'I' || word.word.toUpperCase() === 'MY'){
