@@ -28,10 +28,6 @@ function processArr(wordObjArr) {
     let possessiveCheck = false;
 
     wordObjArr.some(word => {
-        // replace I and MY with "Your"
-        // definite article = 'the', keep that
-        // the first noun is the best noun
-        // keep the adjective before that noun if it exists AND a noun that follows if that exists
 
         if (word.type === 'definite article') {
             newStringArr.push(word.word)
@@ -42,7 +38,11 @@ function processArr(wordObjArr) {
             // check if "being" exists in the string
             const beingCheck = wordObjArr.find(obj => obj.word === 'being'); 
 
-            if (word.word.toUpperCase() === 'I' && wordObjArr[index + 1].word.toUpperCase() === 'AM') {
+            if (word.word.toUpperCase() === `I` && wordObjArr[index + 1].word.toUpperCase() === 'HAVE') {
+                newStringArr.push('having')
+                wordObjArr.splice(index, 2)
+
+            } if (word.word.toUpperCase() === 'I' && wordObjArr[index + 1].word.toUpperCase() === 'AM') {
                 wordObjArr.splice(index, 2)
                 if (!beingCheck) {newStringArr.push('being')}
             }
@@ -55,8 +55,9 @@ function processArr(wordObjArr) {
             wordObjArr.forEach(subWord => {
                 newStringArr.push(subWord.word)
             })
-            newString = newStringArr.join(" ")
 
+            newString = newStringArr.join(" ")
+            return newString
 
         } else if (!possessiveCheck) {
             if (word.word.toUpperCase() === 'I' || word.word.toUpperCase() === 'MY'){
@@ -78,7 +79,7 @@ function processArr(wordObjArr) {
                 newStringArr.push(nounString.join(" "))
         
                 newString = newStringArr.join(" ")
-
+                return newString
             }
         }
 
@@ -101,7 +102,7 @@ function processArr(wordObjArr) {
 function procStatement(string) {
     return new Promise(resolve => {
         const wordArr = string.split(" ")
-
+        console.log(wordArr)
         wordAPI(wordArr).then((res) => {
 
             let newString = processArr(res)
