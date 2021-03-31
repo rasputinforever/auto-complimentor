@@ -31,7 +31,7 @@ function processArr(wordObjArr) {
 
         if (word.type === 'definite article') {
             newStringArr.push(word.word)
-        } else if (!possessiveCheck && wordObjArr[index + 1] && word.word.charAt(0).toUpperCase() === 'I') {
+        } else if (!possessiveCheck) {
             // dealing with posessives
             possessiveCheck = true
 
@@ -53,6 +53,13 @@ function processArr(wordObjArr) {
                 if (!beingCheck) {newStringArr.push('being')}
             }
 
+            // "My ..."
+            if (word.word.toUpperCase() === 'MY'){
+                wordObjArr.splice(index, 1)
+                newStringArr.push("your")
+            }
+            
+            // now patch on the rest of the string, usually makes sense.
             wordObjArr.forEach(subWord => {
                 newStringArr.push(subWord.word)
             })
@@ -61,9 +68,8 @@ function processArr(wordObjArr) {
        
 
         } else if (!possessiveCheck) {
-            if (word.word.toUpperCase() === 'I' || word.word.toUpperCase() === 'MY'){
-                newStringArr.push("your")
-            } else if (nounString.length === 0 && word.word.toUpperCase() !== 'I' && word.word.toUpperCase() !== 'MY' && word.type === 'noun') {
+            // non possessives here
+            if (nounString.length === 0 && word.word.toUpperCase() !== 'I' && word.word.toUpperCase() !== 'MY' && word.type === 'noun') {
                 
                 if (wordObjArr[index - 1] && wordObjArr[index - 1].word.toUpperCase() !== 'MY' && wordObjArr[index - 1].type === 'adjective') {
                     nounString.push(wordObjArr[index - 1].word)
@@ -83,8 +89,6 @@ function processArr(wordObjArr) {
             }
         }
 
-        
-
         index++
 
     })
@@ -102,7 +106,7 @@ function processArr(wordObjArr) {
 function procStatement(string) {
     return new Promise(resolve => {
         const wordArr = string.split(" ")
-        console.log(wordArr)
+
         wordAPI(wordArr).then((res) => {
 
             let newString = processArr(res)
