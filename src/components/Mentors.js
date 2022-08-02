@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Card } from 'react-bootstrap';
 import { messageRandomizer, transformMessage } from '../utils/mentorMsgTools.js'
 // pseudo-db array
-const MentorsDB = require("../db/mentors.js")
+const MentorsDB = require("../db/mentors new.js")
 
 class Mentors extends React.Component {
     constructor(props) {
@@ -39,7 +39,10 @@ class Mentors extends React.Component {
                 {
                 MentorsDB.map((mentor) => {
                     const imgSrc = './images/' + mentor.image
-                    const mentorMessage = messageRandomizer(mentor.messages)
+                    const mentorMessage = messageRandomizer(mentor.messages.neutral)
+
+                
+                    
                     const newMessage = transformMessage(mentorMessage, this.state.username, this.state.problem)
                     // uppercase the first letter of the message
                     const improvedMsg = newMessage.charAt(0).toUpperCase() + newMessage.slice(1);

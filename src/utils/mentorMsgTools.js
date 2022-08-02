@@ -7,7 +7,7 @@ const Message = {
     },
 
     transformMessage: function(msg, name, prob) {
-        
+
         let msgArr = msg.split(" ")
     
         msgArr.forEach(word => {

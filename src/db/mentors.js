@@ -19,7 +19,12 @@ const MentorsDB = [
             `Call it what you will but I think this so-called "problem" of yours, what did you call it? userProblem? It is actually a blessing in disguise, just as you are a blessing to me, userName, in that you will come out of this stronger and wiser than you already are.`,
             `It hurts me deep down to know that userProblem could be causing you, my dearest userName, so much grief. You are strong, you will get through this. I have faith in you!`,
             `So little in this life means as much as you do to me, userName. I can't bear to think of you dealing with userProblem on your own. Don't forget you have me to help you get through this.`,
-            `Oh, userName, you are so sweet to ask me for help. Yes, I know all about userProblem, and yes, we will get through it together. I promise.`
+            `Oh, userName, you are so sweet to ask me for help. Yes, I know all about userProblem, and yes, we will get through it together. I promise.`,      
+            `We worked so hard to give you this life, userName, late nights, skipped meals, all for you. Now does that put userProblem into perspective?`,          
+            `userName! Don't get so upset, not in front of me at least. My image of you is that of an angel. My perfect one and only. You wouldn't let userProblem disrupt that for me, can you?`,
+            `Why didn't you come to me sooner about userProblem? I might not know everything about this world we live in now, userName, but one thing I know is that I will always be there for you.`,
+            `It must be so nice to have this life, userName, where userProblem is what you're so worried about. It makes me happy that all those hard times we got through are in the past now.`,
+            `Are you OK userName? I worry about you, sometimes too much, late at night next to the phone, wondering if you're OK. Oh, userProblem? Don't let those little things ruin what's truly important in this life: family.`,
         ]
     },
     {
