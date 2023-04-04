@@ -2,7 +2,7 @@ import React from "react";
 
 import { Card, InputGroup, FormControl } from 'react-bootstrap';
 import procString from "../utils/languageDecoder.js"
-import ErrorMsg from "./inputError.js"
+import ErrorMsg from "./ErrorMsg.js"
 
 
 const UserInput = ({ userInput, setUserInput, setResponse }) => {
@@ -13,8 +13,9 @@ const UserInput = ({ userInput, setUserInput, setResponse }) => {
     // Updating inputs
     const key = e.target.name;
     const value = e.target.value;    
-    console.log(value)
+    
     const newInput = Object.assign({}, userInput);
+     
     newInput[key] = value
     setUserInput(newInput)
   };
@@ -22,9 +23,11 @@ const UserInput = ({ userInput, setUserInput, setResponse }) => {
   const handleFormSubmit = () => {
     setError(false)
     if (userInput.problem === '') {
-      
-      // error message for empty problem
-      setError(true)
+      setError('Do not leave fields empty! How do you expect help without giving us more personal information?')
+    } else if (userInput.problem.split(' ').length > 5) {
+
+      setError('Your problems are too wordy! These mentors have limits!')
+
     } else {
       
       procString(userInput.problem)
@@ -48,7 +51,7 @@ const UserInput = ({ userInput, setUserInput, setResponse }) => {
       <InputGroup className="mb-3">
         <FormControl
           className='inputBox'
-          value={userInput.userName}
+          value={userInput.userName ?? ""}
           name="userName"
           onChange={handleInputChange}
           type="text"
@@ -59,7 +62,7 @@ const UserInput = ({ userInput, setUserInput, setResponse }) => {
       <InputGroup className="mb-3">
         <FormControl
           className='inputBox'
-          value={userInput.problem}
+          value={userInput.problem ?? ""}
           name="problem"
           onChange={handleInputChange}
           type="text"
@@ -69,7 +72,7 @@ const UserInput = ({ userInput, setUserInput, setResponse }) => {
 
       <div className='submitBtn' onClick={handleFormSubmit}>Submit</div>
 
-      {error ? <ErrorMsg /> : null}      
+      {error ? <ErrorMsg error={error} /> : null}      
 
 
     </Card>
