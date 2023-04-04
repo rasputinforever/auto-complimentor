@@ -1,20 +1,22 @@
 import API from "./API";
 
-async function wordAPI(wordArr) {
+const wordAPI = async (wordArr) => {
     // this processes each word in the string, replacing each word with an object which includes wordType
-    for (let i = 0; i < wordArr.length; i++) {
-        const word = wordArr[i]
-        await API.search(word)
-                .then(res => {
-                    // find first entry contining "fl"
-                    const foundType = res.data.find(obj => obj.fl);
-                    wordArr[i] = {
-                        'word': word,
-                        type: foundType.fl
-                    }
-                })    
-    }
-    return wordArr
+    await Promise.all(wordArr.map(async (word, i) => {
+       
+        const res = await API.search(word)        
+       
+        // find first entry contining "fl"
+        const foundType = res.data.find(obj => obj.fl);
+
+        wordArr[i] = {
+            'word': word,
+            type: foundType.fl
+        }
+        
+    }))
+
+    return wordArr 
 }
 
 function processArr(wordObjArr) {
@@ -103,20 +105,18 @@ function processArr(wordObjArr) {
 }
 
 // this cranks through the statement and returns a truncated "subject" of the user's input to inject into the mentor-template
-function procStatement(string) {
-    return new Promise(resolve => {
-        const wordArr = string.split(" ")
+const procStatement = async (string) => {
+    const wordArr = string.split(" ")
 
-        wordAPI(wordArr).then((res) => {
-
-            let newString = processArr(res)
-            // will receive a false res if the user input doesn't contain any detected nouns or terrible spellings
-            if (!newString) {
-                newString = '"' + string + '"'
-            }
-            resolve(newString)
-        })
-    })
+    const response = await wordAPI(wordArr)
+    let newString = processArr(response)
+    
+    // will receive a false res if the user input doesn't contain any detected nouns or terrible spellings
+    if (!newString) {
+        newString = '"' + string + '"'
+    }
+    
+    return newString
 }
 
 export default procStatement
